@@ -50,7 +50,7 @@ ADMIN_TEMPLATE=os.environ.get('ADMIN_TEMPLATE')
 UPLOADS=os.environ.get('UPLOADS')
 CACHE=os.environ.get('CACHE')
 CACHE_TIME=3600 #1h
-CACHE_USE=True
+CACHE_USE=False
 
 TERM_EMAIL_RECPS=['tamas.tobi@gmail.com','mimoxindex@mimox.com']
 ##########################################
