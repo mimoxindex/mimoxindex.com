@@ -72,6 +72,8 @@ class MimoxIndex():
 		except Exception,e:
 			print str(e),". Exit!"
 			sys.exit(1)
+
+	def initAltaMysqlConn(self):
 		try:
 			self.alta_db=MySQLdb.connect(host=self.ALTA_DBHOST,port=3306,user=self.ALTA_DBUSER, passwd=self.ALTA_DBPASS, db=self.ALTA_DBNAME, charset='utf8', init_command='SET NAMES UTF8')
 			self.alta_c=self.alta_db.cursor()
@@ -79,6 +81,7 @@ class MimoxIndex():
 		except Exception,e:
 			print e
 			pass
+
 			
 	def closeMysqlConn(self):
 		try:
@@ -532,7 +535,7 @@ class MimoxIndex():
 				print e
 				pass
 
-			
+		self.initAltaMysqlConn()
 		if not self.alta_db:
 			print "No ALTADB connection. Exit."
 			return
