@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCRIPT_PATH="/var/www/mimoxindex/cron/scripts/mimoxindex.py"
+SCRIPT_PATH="/var/www/mimoxindex.com/cron/scripts/mimoxindex.py"
 
-export BASEDIR="/var/www/mimoxindex/rssoutput" 
+export BASEDIR="/var/www/mimoxindex.com/rssoutput" 
 
 export DBHOST="127.0.0.1"
 export DBUSER=""
