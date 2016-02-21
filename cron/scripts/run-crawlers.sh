@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CRAWLER_ROOT="/var/www/mimoxindex/cron/crawlers"
-CRAWLER_OUTPUT="/var/www/mimoxindex/rssoutput"
+CRAWLER_ROOT="/var/www/mimoxindex.com/cron/crawlers"
+CRAWLER_OUTPUT="/var/www/mimoxindex.com/rssoutput"
 CACHE="/mnt"
 cd ${CRAWLER_ROOT}
 
