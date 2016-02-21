@@ -1,0 +1,4 @@
+###run mimoxindex scripts
+0 1 * * *     www-data    /var/www/mimoxindex.com/cron/scripts/run-cron.sh
+* * * * *     root    /var/www/mimoxindex.com/cron/scripts/check_logpath.sh > /dev/null 2>&1
+* * * * *     www-data    nohup /var/www/mimoxindex.com/invoke-mimoxindex-web.sh >> /mnt/weblog/mimoxindex-ui.log 2>&1 &
