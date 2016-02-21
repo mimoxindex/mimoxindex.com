@@ -10,6 +10,7 @@ import smtplib
 from recaptcha import RecaptchaClient
 import uuid
 import sys
+import cPickle as pickle
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -757,6 +758,23 @@ def ajax_termsearch(term=""):
 		rtr.append(row[0])
 	closeconn(db,c)
 	return json.dumps(rtr)
+	
+@route('/ajax_gethistory/', method='GET')
+def ajax_gethistory(searchdate=""):
+	searchdate=""
+	s = request.session
+	searchdate_dict = request.query.decode()
+	if 'searchdate' in searchdate_dict:
+		searchdate = searchdate_dict['searchdate']
+	db,c=MySQLConn()
+
+	qry="SELECT pickledump FROM trendhistory WHERE trenddate like %s LIMIT 1 ORDER BY trenddate DESC"
+	c.execute(qry, (term+'%'))
+	irows = c.fetchall()
+	pickle_date=pickle.loads(str(irows[0][0]))
+	closeconn(db,c)
+	return json.dumps(pickle_date)
+	
 	
 @route('/submit_term/', method='POST')
 def submit_term():
