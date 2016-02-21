@@ -182,6 +182,8 @@ div.ascdesc{
 
 .scrollToTop{
 	display:none;
+	text-align:center;
+	vertical-align:middle;
 }
 .scrollToTop:hover{
 	text-decoration:none;
