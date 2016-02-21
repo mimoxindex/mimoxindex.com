@@ -768,8 +768,8 @@ def ajax_gethistory(searchdate=""):
 		searchdate = searchdate_dict['searchdate']
 	db,c=MySQLConn()
 
-	qry="SELECT pickledump FROM trendhistory WHERE trenddate like %s LIMIT 1 ORDER BY trenddate DESC"
-	c.execute(qry, (term+'%'))
+	qry="SELECT pickledump FROM trendhisory WHERE trenddate LIKE %s ORDER BY trenddate DESC  LIMIT 1"
+	c.execute(qry, (searchdate+'%'))
 	irows = c.fetchall()
 	pickle_date=pickle.loads(str(irows[0][0]))
 	closeconn(db,c)
