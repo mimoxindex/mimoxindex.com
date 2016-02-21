@@ -1,0 +1,178 @@
+@font-face {
+	font-family: MimoxIndexFont_Regular;
+	src: url(PT_Sans-Web-Regular.ttf);
+}
+
+
+@font-face {
+	font-family: MimoxIndexFont_Bold;
+	src: url(PT_Sans-Web-Bold.ttf);
+}
+
+table {
+	border-collapse: collapse;
+	border: 0px;
+}
+
+td {
+	border-collapse: collapse;
+	border: 0px;
+}
+
+html * {
+	font-family: MimoxIndexFont_Regular, MimoxIndexFont_Bold;
+	font-size: 18px;
+}
+
+body {
+	font-family: MimoxIndexFont_Regular, MimoxIndexFont_Bold;
+	color: #222222;
+	vertical-align: middle;
+	background: #747070;
+}
+
+a,a:link,a:visited,a:hover,a:active {
+	color: #0070BC;
+	text-decoration: none;
+	border: 0;
+	margin:0;
+}
+
+table.level1{
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+tr.odd {
+	border: 1px solid black;
+	background: #fafafa;
+}
+tr.even {
+	border: 1px solid black;
+	background: #00aeef;
+	color:#fafafa;
+}
+tr.head {
+	color:#ffffff;
+	background: #0068ae;
+	font-weight:bold;
+	font-size: 16px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+td.head{
+	border: 1px solid black;
+}
+
+td.left{
+	border: 1px solid black;
+	text-align:left;
+	vertical-align:middle;
+	font-weight:bold;
+	padding-left:3px;
+}
+td.rank{
+	border: 1px solid black;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.date {
+	font-size: 11px;
+	color: #333333;
+}
+.search {
+	font-weight:bold;
+	color: #6B0024;
+}
+tr.level1	{
+	background: #0068ae;
+}
+
+tr.level2	{
+	background: #ffffff;
+}
+
+span.level1 {
+	font-weight:bolder;
+	color: #0068ae;
+	font-size: 40px;
+}
+
+span.level2 {
+	font-family: MimoxIndexFont_Regular;
+	font-size: 18px;
+	color: #222222;
+}
+
+span.level3 {
+	font-size: 12px;
+}
+
+input[type=checkbox], input[type=radio] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+}
+
+div.level1{
+	padding: 7px;
+	background: #0068ae;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight:bold;
+}
+div.rank{
+	display: inline;
+	float:right;
+	text-align:right;
+	font-size: 14px;
+	width: 20pt;
+	margin:0;
+	padding:0;
+	vertical-align:middle;
+}
+div.imgrank{
+	vertical-align:middle;
+	display: inline-flex;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+a.order,a.order:link,a.order:visited,a.order:hover,a.order:active {
+	color:#ffffff;
+	text-decoration: none;
+	border: 0;
+	margin:0;
+}
+div.ascdesc{
+	display: inline;
+	float:right;
+	text-align:right;
+	width: 20pt;
+	margin-top:5pt;
+	padding:0;
+	vertical-align:middle;
+}
+/* highlight results */
+.ui-autocomplete span.hl_results {
+    background-color: #ffff66;
+}
+ 
+/* scroll results */
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding for vertical scrollbar */
+    padding-right: 5px;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+    height: 250px;
+}
+
+

@@ -1,0 +1,1789 @@
+id;origtext;enabled;is_default;default_terms_id;Group Value
+4967;SQL;1;1;0;Programming Languages
+4968;.NET;1;1;0;Libraries, Frameworks & Software Standards
+4969;MS SQL Server;1;1;0;Database & Business Intelligence
+4970;C#;1;1;0;Programming Languages
+4971;Java;1;1;0;Programming Languages
+4976;JavaScript;1;1;0;Programming Languages
+4978;HTML;1;1;0;Libraries, Frameworks & Software Standards
+4979;CSS;1;1;0;Libraries, Frameworks & Software Standards
+4980;Linux;1;1;0;Operating Systems
+4981;ASP.NET;1;1;0;Libraries, Frameworks & Software Standards
+4983;MS Excel;1;1;0;Applications
+4984;XML;1;1;0;Libraries, Frameworks & Software Standards
+4986;UNIX;1;1;0;Operating Systems
+4990;C++;1;1;0;Programming Languages
+4994;ITIL;1;1;0;Processes & Methodologies
+4996;PHP;1;1;0;Programming Languages
+4997;Cisco;1;1;0;Vendors
+4999;VMware;1;1;0;Vendors
+5000;MySQL;1;1;0;Database & Business Intelligence
+5002;jQuery;1;1;0;Libraries, Frameworks & Software Standards
+5003;Active Directory;1;1;0;System Software
+5009;J2EE;1;1;0;Libraries, Frameworks & Software Standards
+5011;MVC;1;1;0;Processes & Methodologies
+5013;Ajax;1;1;0;Libraries, Frameworks & Software Standards
+5018;SharePoint;1;1;0;Application Platforms
+5019;TDD;1;1;0;Processes & Methodologies
+5020;Spring;1;1;0;Libraries, Frameworks & Software Standards
+5023;Windows Server 2008;1;1;0;Operating Systems
+5029;MS Office;1;1;0;Applications
+5030;Windows Server 2003;1;1;0;Operating Systems
+5032;C;1;1;0;Programming Languages
+5035;VB.NET;1;1;0;Programming Languages
+5036;WCF;1;1;0;Libraries, Frameworks & Software Standards
+5037;TCP/IP;1;1;0;Communications & Networking
+5038;MS Exchange;1;1;0;Application Platforms
+5039;T-SQL;1;1;0;Programming Languages
+5043;Apache;1;1;0;Application Platforms
+5047;Perl;1;1;0;Programming Languages
+5048;UML;1;1;0;Processes & Methodologies
+5050;Citrix;1;1;0;Vendors
+5051;Visual Studio;1;1;0;Development Applications
+5057;SAN;1;1;0;Communications & Networking
+5058;Python;1;1;0;Programming Languages
+5059;Hibernate;1;1;0;Libraries, Frameworks & Software Standards
+5060;Subversion;1;1;0;Development Applications
+5061;XHTML;1;1;0;Libraries, Frameworks & Software Standards
+5064;WPF;1;1;0;Libraries, Frameworks & Software Standards
+5066;MS Visio;1;1;0;Applications
+5067;VB;1;1;0;Programming Languages
+5071;CMS;1;0;0;Application Platforms
+5072;IIS;1;0;0;Application Platforms
+5073;WAN;1;1;0;Communications & Networking
+5076;DNS;1;1;0;Communications & Networking
+5085;ETL;1;1;0;Processes & Methodologies
+5086;SLA;0;0;0;Quality Assurance & Compliance
+5087;Windows XP;1;1;0;Operating Systems
+5089;SOA;1;1;0;Processes & Methodologies
+5090;PL/SQL;1;1;0;Programming Languages
+5093;Tomcat;1;1;0;Application Platforms
+5097;ISEB;1;0;0;Qualifications
+5098;WinForms;1;1;0;Libraries, Frameworks & Software Standards
+5099;HTML5;1;1;0;Libraries, Frameworks & Software Standards
+5100;ASP.NET MVC;1;1;0;Libraries, Frameworks & Software Standards
+5102;OOP;1;1;0;Processes & Methodologies
+5106;XSLT;1;1;0;Libraries, Frameworks & Software Standards
+5112;Solaris;1;1;0;Operating Systems
+5113;VPN;1;1;0;Communications & Networking
+5116;CCNA;1;1;0;Qualifications
+5117;Flash;1;1;0;Libraries, Frameworks & Software Standards
+5118;RDBMS;1;1;0;Database & Business Intelligence
+5119;JSP;1;1;0;Libraries, Frameworks & Software Standards
+5124;SOAP;1;1;0;Libraries, Frameworks & Software Standards
+5125;Android;1;1;0;Operating Systems
+5126;LINQ;1;1;0;Libraries, Frameworks & Software Standards
+5127;Red Hat;1;1;0;Vendors
+5131;Shell Script;1;1;0;Programming Languages
+5135;WebSphere;1;1;0;Application Platforms
+5137;SC Cleared;0;0;0;Qualifications
+5140;Silverlight;1;1;0;Libraries, Frameworks & Software Standards
+5141;JBoss;1;1;0;Vendors
+5142;Selenium;1;1;0;Development Applications
+5143;Photoshop;1;1;0;Applications
+5145;ASP;1;1;0;Programming Languages
+5146;Ruby;1;1;0;Programming Languages
+5148;CCNP;1;1;0;Qualifications
+5150;VBA;1;1;0;Programming Languages
+5156;Business Objects;1;0;5424;Database & Business Intelligence
+5161;HTTP;0;1;0;Communications & Networking
+5164;SEO;1;1;0;Processes & Methodologies
+5168;VoIP;1;1;0;Communications & Networking
+5171;Blackberry;1;1;0;Miscellaneous
+5173;NHibernate;1;1;0;Libraries, Frameworks & Software Standards
+5176;NUnit;1;1;0;Development Applications
+5179;WebLogic;1;1;0;Application Platforms
+5188;JUnit;1;1;0;Development Applications
+5190;Eclipse;1;1;0;Development Applications
+5191;DHCP;1;1;0;Communications & Networking
+5194;Struts;1;1;0;Libraries, Frameworks & Software Standards
+5197;Juniper;1;1;0;Vendors
+5205;OOD;1;1;0;Processes & Methodologies
+5208;CheckPoint;1;1;0;Vendors
+5209;PHP5;1;0;4996;Programming Languages
+5210;Servlets;0;0;0;Libraries, Frameworks & Software Standards
+5212;EMC;1;1;0;Vendors
+5213;Team Foundation Server;1;1;0;Development Applications
+5214;Dynamics CRM;1;1;0;Business Applications
+5221;BDD;1;1;0;Processes & Methodologies
+5224;SAS;1;1;0;Application Platforms
+5225;Zend;1;1;0;Vendors
+5226;Hyper-V;1;1;0;System Software
+5229;Replication;0;0;0;Miscellaneous
+5237;Java/J2EE;1;0;5009;Libraries, Frameworks & Software Standards
+5238;Maven;1;1;0;Development Applications
+5239;Sybase;1;1;0;Vendors
+5241;Oracle 10g;1;0;9410;Database & Business Intelligence
+5242;Java EE;1;1;0;Libraries, Frameworks & Software Standards
+5243;Git;1;1;0;Development Applications
+5244;NetApp;1;0;0;Vendors
+5247;vSphere;1;1;0;System Software
+5250;SaaS;1;1;0;Cloud Services
+5253;ActionScript;1;1;0;Programming Languages
+5256;JMS;1;0;0;Libraries, Frameworks & Software Standards
+5258;Crystal Reports;1;1;0;Database & Business Intelligence
+5259;TOGAF;1;0;0;Processes & Methodologies
+5261;Oracle 8/8i;1;0;9410;Database & Business Intelligence
+5263;MS Project;1;1;0;Applications
+5266;DB2;1;1;0;Database & Business Intelligence
+5267;JSON;1;1;0;Libraries, Frameworks & Software Standards
+5268;REST;1;1;0;Libraries, Frameworks & Software Standards
+5269;Oracle 11g;1;0;9410;Database & Business Intelligence
+5272;Ant;1;0;0;Development Applications
+5273;Rhino Mocks;1;1;0;Development Applications
+5278;N-Tier;1;0;0;Miscellaneous
+5280;EJB;1;0;0;Libraries, Frameworks & Software Standards
+5281;MS PowerPoint;1;1;0;Applications
+5283;Windows Vista;1;1;0;Operating Systems
+5285;CSS3;1;1;0;Libraries, Frameworks & Software Standards
+5286;JDBC;1;1;0;Libraries, Frameworks & Software Standards
+5288;AIX;1;1;0;Operating Systems
+5290;XenApp;1;1;0;System Software
+5291;OLAP;1;1;0;Database & Business Intelligence
+5294;CISSP;1;0;0;Qualifications
+5295;VB6;1;1;0;Programming Languages
+5297;Bash shell;1;1;0;Programming Languages
+5300;Cognos;1;1;0;Vendors
+5301;HP Quality Center;1;1;0;Systems Management
+5302;MCAD;1;0;0;Qualifications
+5304;NAS;1;0;0;Communications & Networking
+5306;Drupal;1;1;0;Application Platforms
+5308;VBScript;1;1;0;Programming Languages
+5310;RUP;1;1;0;Processes & Methodologies
+5313;BizTalk;1;1;0;Application Platforms
+5315;Oracle EBS;1;1;0;Business Applications
+5316;SCCM;1;0;0;Systems Management
+5317;QuickTest Pro;1;1;0;Development Applications
+5322;MPLS;1;0;0;Communications & Networking
+5325;J2SE;1;1;0;Libraries, Frameworks & Software Standards
+5326;JIRA;1;1;0;Development Applications
+5327;Kanban;1;1;0;Processes & Methodologies
+5332;Oracle Reports;1;1;0;Database & Business Intelligence
+5333;Adobe Illustrator;1;1;0;Applications
+5335;Sun;1;1;0;Vendors
+5336;TIBCO;1;1;0;Vendors
+5340;Objective-C;1;1;0;Programming Languages
+5350;CCIE;1;1;0;Qualifications
+5353;BGP;1;0;0;Communications & Networking
+5356;Informatica;1;1;0;Vendors
+5357;OSPF;1;0;0;Communications & Networking
+5359;ISTQB;1;1;0;Qualifications
+5361;SSL;1;1;0;Communications & Networking
+5365;Ruby on Rails;1;1;0;Libraries, Frameworks & Software Standards
+5367;Salesforce.com;1;1;0;Vendors
+5373;Swing;1;1;0;Libraries, Frameworks & Software Standards
+5378;Adobe Flex;1;1;0;Libraries, Frameworks & Software Standards
+5379;PowerShell;1;1;0;Programming Languages
+5393;Dynamics AX;1;0;7850;Business Applications
+5396;VLAN;1;0;0;Communications & Networking
+5399;Hyperion;1;1;0;Vendors
+5401;PCI DSS;1;1;0;Quality Assurance & Compliance
+5404;Castle Windsor;1;1;0;Libraries, Frameworks & Software Standards
+5405;RESTful;1;1;0;Libraries, Frameworks & Software Standards
+5406;XSL;1;1;0;Libraries, Frameworks & Software Standards
+5410;Ethernet;1;0;0;Communications & Networking
+5414;DV Cleared;1;0;0;Qualifications
+5418;STL;1;1;0;Libraries, Frameworks & Software Standards
+5420;LoadRunner;1;1;0;Development Applications
+5424;BusinessObjects;1;1;0;Database & Business Intelligence
+5426;WordPress;1;1;0;Application Platforms
+5429;Six Sigma;1;1;0;Processes & Methodologies
+5431;F5;1;0;0;Vendors
+5432;RAD;1;0;0;Processes & Methodologies
+5435;Spring MVC;1;0;5020;Libraries, Frameworks & Software Standards
+5436;ESB;1;0;0;Not Yet Defined
+5438;MS Access;1;1;0;Database & Business Intelligence
+5439;NetBackup;1;0;0;Systems Management
+5441;ABAP;1;1;0;Programming Languages
+5443;Windows 2000;1;1;0;Operating Systems
+5445;ITSM;1;1;0;Processes & Methodologies
+5446;SCOM;1;0;0;Systems Management
+5450;DTS;1;0;0;Database & Business Intelligence
+5452;XenDesktop;1;1;0;System Software
+5454;PostgreSQL;1;1;0;Database & Business Intelligence
+5456;SAP FI;1;1;0;Business Applications
+5460;SAP CO;1;1;0;Business Applications
+5464;Remedy;1;1;0;Vendors
+5466;OOA;1;1;0;Not Yet Defined
+5467;Hudson;1;0;0;Development Applications
+5472;Cucumber;1;1;0;Development Applications
+5474;Zachman;1;1;0;Libraries, Frameworks & Software Standards
+5480;MATLAB;1;1;0;Programming Languages
+5481;Delphi;1;0;0;Programming Languages
+5484;FTP;1;0;0;Communications & Networking
+5487;Cisco PIX;1;1;0;Communications & Networking
+5491;LDAP;1;1;0;Communications & Networking
+5494;DHTML;1;1;0;Libraries, Frameworks & Software Standards
+5496;CentOS;1;0;0;Operating Systems
+5500;GSM;1;1;0;Communications & Networking
+5501;SAP BW;1;1;0;Database & Business Intelligence
+5504;Backup Exec;1;0;0;Systems Management
+5505;SMTP;1;0;0;Communications & Networking
+5509;Oracle Applications;1;1;0;Business Applications
+5510;Siebel;1;1;0;Vendors
+5511;Spread Betting;1;0;0;Miscellaneous
+5515;WF;1;0;0;Libraries, Frameworks & Software Standards
+5516;Oracle Forms;1;1;0;Development Applications
+5517;Embedded C;1;1;0;Programming Languages
+5519;Scala;1;1;0;Programming Languages
+5524;Oracle Financials;1;1;0;Business Applications
+5525;Lotus Notes;1;1;0;Application Platforms
+5526;Dreamweaver;1;1;0;Development Applications
+5527;HP-UX;1;1;0;Operating Systems
+5533;Sage;1;1;0;Vendors
+5535;XPath;1;1;0;Programming Languages
+5536;Oracle 9i;1;0;9410;Database & Business Intelligence
+5540;DSDM;1;0;0;Processes & Methodologies
+5541;Oracle RAC;1;1;0;System Software
+5543;JPA;1;1;0;Libraries, Frameworks & Software Standards
+5544;Lucene;1;0;0;Libraries, Frameworks & Software Standards
+5548;Magento;1;0;0;Business Applications
+5550;XenServer;1;1;0;System Software
+5553;OLTP;1;0;0;Database & Business Intelligence
+5554;MDX;1;0;0;Libraries, Frameworks & Software Standards
+5555;Debian;1;1;0;Operating Systems
+5557;Terminal Services;1;0;0;System Software
+5561;CISA;1;0;0;Qualifications
+5562;Tivoli;1;1;0;Systems Management
+5563;CCSP;1;1;0;Qualifications
+5568;LTE;1;0;0;Communications & Networking
+5571;Symfony;1;1;0;Libraries, Frameworks & Software Standards
+5572;CCA;1;0;0;Qualifications
+5575;EIGRP;1;0;0;Communications & Networking
+5576;MVVM;1;0;0;Processes & Methodologies
+5578;3G;1;1;0;Communications & Networking
+5579;EPoS;1;0;0;Miscellaneous
+5580;NoSQL;1;1;0;Database & Business Intelligence
+5583;JSF;1;1;0;Libraries, Frameworks & Software Standards
+5584;Google Analytics;1;1;0;Business Applications
+5586;BT;1;0;0;Vendors
+5589;Umbraco;1;1;0;Application Platforms
+5593;CISM;1;0;0;Qualifications
+5599;Blue Coat;1;0;0;Vendors
+5600;VCP4;1;1;0;Qualifications
+5604;Dynamics NAV;1;0;7292;Business Applications
+5610;XSD;1;1;0;Libraries, Frameworks & Software Standards
+5613;NetWeaver;1;1;0;Application Platforms
+5616;Moq;1;0;0;Development Applications
+5618;SNMP;1;0;0;Communications & Networking
+5620;Boost;1;1;0;Libraries, Frameworks & Software Standards
+5623;VC++;1;0;9367;Programming Languages
+5625;BPR;1;0;0;Processes & Methodologies
+5626;TOAD;1;1;0;Development Applications
+5628;Nagios;1;1;0;Systems Management
+5629;Windows Mobile;1;0;6148;Operating Systems
+5631;Hadoop;1;1;0;Database & Business Intelligence
+5633;SAP SD;1;1;0;Business Applications
+5634;GIS;1;1;0;Miscellaneous
+5636;Ubuntu;1;1;0;Operating Systems
+5638;ADO.NET;1;0;6449;Libraries, Frameworks & Software Standards
+5640;RIA;1;0;0;Miscellaneous
+5641;YUI;1;1;0;Libraries, Frameworks & Software Standards
+5644;ATM;1;0;0;Communications & Networking
+5647;HND;1;0;0;Qualifications
+5648;GWT;1;1;0;Libraries, Frameworks & Software Standards
+5650;UMTS;1;1;0;Communications & Networking
+5651;Groovy;1;1;0;Programming Languages
+5652;MonoRail;1;0;0;Libraries, Frameworks & Software Standards
+5655;SourceSafe;1;1;0;Development Applications
+5656;FitNesse;1;0;0;Development Applications
+5657;DataStage;1;1;0;Database & Business Intelligence
+5658;Mac OS X;1;1;0;Operating Systems
+5659;Cocoa;1;1;0;Libraries, Frameworks & Software Standards
+5662;Lync;1;1;0;Application Platforms
+5663;Xen;1;1;0;System Software
+5666;Fireworks;1;0;0;Applications
+5668;QlikView;1;0;0;Database & Business Intelligence
+5669;MongoDB;1;1;0;Database & Business Intelligence
+5670;Django;1;1;0;Libraries, Frameworks & Software Standards
+5673;Cisco IOS;1;1;0;Communications & Networking
+5677;CIMA;1;0;0;Qualifications
+5679;Brocade;1;0;0;Vendors
+5681;Oracle 11i;1;0;9410;Business Applications
+5682;IPsec;1;0;0;Communications & Networking
+5685;iSCSI;1;0;0;Communications & Networking
+5686;CLARiiON;1;0;0;Miscellaneous
+5691;TeamCity;1;0;0;Development Applications
+5693;J2ME;1;1;0;Libraries, Frameworks & Software Standards
+5696;iSeries;1;1;0;Miscellaneous
+5697;Oracle RMAN;1;1;0;System Software
+5705;Puppet;1;1;0;Systems Management
+5710;EAI;1;1;0;Processes & Methodologies
+5712;COM;1;1;0;Libraries, Frameworks & Software Standards
+5715;CCDP;1;1;0;Qualifications
+5717;Joomla;1;1;0;Application Platforms
+5718;CCSA;1;1;0;Qualifications
+5721;SAP BI;1;1;0;Database & Business Intelligence
+5723;Teradata;1;1;0;Vendors
+5725;AS400;1;1;0;Miscellaneous
+5726;Xcode;1;1;0;Development Applications
+5727;Murex;1;1;0;Vendors
+5729;Oracle Coherence;1;1;0;Application Platforms
+5731;CA;1;1;0;Vendors
+5737;ClearCase;1;1;0;Development Applications
+5741;iOS;1;1;0;Operating Systems
+5753;Sitecore;1;0;5812;Vendors
+5754;SIEM;1;0;0;Processes & Methodologies
+5755;Data Guard;1;0;9387;Systems Management
+5757;Oracle Fusion;1;1;0;Libraries, Frameworks & Software Standards
+5759;PBX;1;0;0;Communications & Networking
+5760;Device Driver;1;0;0;Miscellaneous
+5762;DOM;1;0;0;Libraries, Frameworks & Software Standards
+5763;SPSS;1;1;0;Applications
+5770;Apex Code;1;1;0;Programming Languages
+5771;GPRS;1;1;0;Communications & Networking
+5774;Dojo;1;0;0;Libraries, Frameworks & Software Standards
+5776;Tandem;1;0;0;Miscellaneous
+5777;ATG;1;0;0;Vendors
+5778;OpenView;1;1;0;Systems Management
+5782;MicroStrategy;1;1;0;Vendors
+5784;Grid Computing;1;1;0;Miscellaneous
+5785;CodeIgniter;1;1;0;Libraries, Frameworks & Software Standards
+5786;WSUS;1;0;0;Systems Management
+5787;Military;1;0;0;General
+5788;PeopleSoft;1;1;0;Vendors
+5790;Solvency II;1;0;0;Quality Assurance & Compliance
+5795;Symbian;1;1;0;Vendors
+5796;MFC;1;1;0;Libraries, Frameworks & Software Standards
+5798;Summit;1;0;0;Business Applications
+5800;BusinessObjects XI;1;1;0;Database & Business Intelligence
+5802;Blog;1;0;0;Miscellaneous
+5807;ISA Server;1;0;0;System Software
+5808;NFS;1;0;0;System Software
+5810;MBA;1;0;0;Qualifications
+5812;Sitecore CMS;1;1;0;Application Platforms
+5814;Oracle OLAP;0;0;0;Database & Business Intelligence
+5817;Ab Initio;1;1;0;Vendors
+5820;Velocity;1;0;0;Libraries, Frameworks & Software Standards
+5824;Mitel;1;0;0;Vendors
+5825;Websense;1;1;0;Vendors
+5826;MQSeries;1;1;0;Application Platforms
+5827;COBOL;1;1;0;Programming Languages
+5832;CAD;1;1;0;Processes & Methodologies
+5837;CMMI;1;0;0;Processes & Methodologies
+5842;Korn;1;0;0;Programming Languages
+5844;Bugzilla;1;1;0;Development Applications
+5846;BCP;1;0;0;Processes & Methodologies
+5847;EDI;1;1;0;Libraries, Frameworks & Software Standards
+5852;SAP Basis;1;1;0;Libraries, Frameworks & Software Standards
+5853;Oracle Workflow;1;1;0;Application Platforms
+5854;Visualforce;1;1;0;Libraries, Frameworks & Software Standards
+5861;ActiveMQ;1;1;0;Libraries, Frameworks & Software Standards
+5863;F#;1;1;0;Programming Languages
+5864;GlassFish;1;1;0;Application Platforms
+5872;Java SE;1;0;5325;Libraries, Frameworks & Software Standards
+5878;Office Communications Server;1;0;0;Application Platforms
+5879;CCSE;1;1;0;Qualifications
+5880;Omniture;1;0;0;Vendors
+5881;XML Schema;1;1;0;Libraries, Frameworks & Software Standards
+5884;Fibre Channel;1;0;0;Communications & Networking
+5887;Informix;1;0;0;Database & Business Intelligence
+5888;CCEA;1;0;0;Qualifications
+5889;CakePHP;1;1;0;Libraries, Frameworks & Software Standards
+5890;CommVault;1;0;0;Vendors
+5891;JD Edwards;1;1;0;Vendors
+5892;V-Model;1;1;0;Processes & Methodologies
+5893;Wi-Fi;1;1;0;Communications & Networking
+5894;OpenGL;1;1;0;Libraries, Frameworks & Software Standards
+5897;Altiris;1;0;0;Vendors
+5900;SAP CRM;1;1;0;Business Applications
+5901;Cisco IPT;1;1;0;Communications & Networking
+5904;BusinessObjects Web Intelligence;1;1;0;Database & Business Intelligence
+5905;SUSE;1;1;0;Operating Systems
+5907;Documentum;1;1;0;Application Platforms
+5908;Field-Programmable Gate Array;1;0;7835;Miscellaneous
+5911;Jetty;1;0;0;Application Platforms
+5914;ETRM;1;0;0;Processes & Methodologies
+5916;EPiServer;1;0;0;Vendors
+5918;SMS;1;0;0;Communications & Networking
+5920;Amazon EC2;1;1;0;Cloud Services
+5921;Fat Client;1;0;0;Miscellaneous
+5926;TestDirector;1;1;0;Development Applications
+5929;WSDL;1;1;0;Libraries, Frameworks & Software Standards
+5933;ColdFusion;1;1;0;Application Platforms
+5936;COBIT;1;1;0;Quality Assurance & Compliance
+5937;Force.com;1;0;0;Cloud Services
+5938;JNCIA;1;0;0;Qualifications
+5942;PPC;1;0;0;Not Yet Defined
+5945;Ext JS;1;1;0;Libraries, Frameworks & Software Standards
+5947;HNC;1;0;0;Qualifications
+5948;RabbitMQ;1;1;0;Libraries, Frameworks & Software Standards
+5956;SAP R/3;1;1;0;Business Applications
+5959;Mercurial;1;0;0;Development Applications
+5960;Oracle OWB;1;0;7652;Database & Business Intelligence
+5962;SAP XI;1;1;0;Libraries, Frameworks & Software Standards
+5965;Citrix Presentation Server;1;1;0;System Software
+5967;Systems Management Server (SMS);1;1;0;Systems Management
+5968;MOM;1;0;0;Systems Management
+5969;Amazon AWS;1;1;0;Cloud Services
+5970;SSH;1;1;0;Communications & Networking
+5971;MODAF;1;0;0;Processes & Methodologies
+5974;iOS SDK;1;1;0;Libraries, Frameworks & Software Standards
+5975;ADSL;1;1;0;Communications & Networking
+5978;Axure RP;1;0;0;Development Applications
+5982;R;1;1;0;Programming Languages
+5984;Assembly;1;1;0;Programming Languages
+5988;NCDA;1;0;0;Qualifications
+5989;SAP HR;1;1;0;Business Applications
+5990;MooTools;1;1;0;Libraries, Frameworks & Software Standards
+5992;RHCE;1;1;0;Qualifications
+5998;X++;1;1;0;Programming Languages
+6004;PKI;1;0;0;Miscellaneous
+6005;BODI;1;0;0;Database & Business Intelligence
+6010;Windows NT;1;1;0;Operating Systems
+6012;CCIA;1;0;0;Qualifications
+6013;vCenter;1;0;0;Not Yet Defined
+6017;SAP ERP;1;1;0;Business Applications
+6018;Tivoli Storage Manager;1;1;0;Systems Management
+6022;SAP BPC;1;1;0;Business Applications
+6023;DataSynapse;1;0;0;Vendors
+6027;Erlang;1;1;0;Programming Languages
+6028;NCIE;1;0;0;Qualifications
+6029;ODBC;1;1;0;Libraries, Frameworks & Software Standards
+6030;JMeter;1;1;0;Development Applications
+6034;IPTV;1;0;0;Miscellaneous
+6035;Rendezvous;1;0;0;Libraries, Frameworks & Software Standards
+6037;Embedded C++;1;1;0;Programming Languages
+6038;JSTL;1;0;0;Libraries, Frameworks & Software Standards
+6042;WLAN;1;1;0;Communications & Networking
+6045;RPG;1;1;0;Programming Languages
+6047;Windows SharePoint Services;1;0;5018;Libraries, Frameworks & Software Standards
+6050;Charles River;1;0;0;Vendors
+6053;Oracle Discoverer;1;1;0;Database & Business Intelligence
+6058;DMZ;1;1;0;Communications & Networking
+6059;BPEL;1;0;0;Processes & Methodologies
+6061;SAP PP;1;1;0;Business Applications
+6062;CruiseControl;1;0;0;Development Applications
+6063;Tcl;1;0;0;Programming Languages
+6067;Oracle Enterprise Manager;1;1;0;Systems Management
+6068;SAP MM;1;1;0;Business Applications
+6069;BBC;1;0;0;Miscellaneous
+6071;PDA;1;0;0;Miscellaneous
+6072;OpenLink;1;1;0;Vendors
+6075;SolarWinds;1;0;0;Vendors
+6076;3GPP;1;1;0;Communications & Networking
+6078;Apache Solr;1;1;0;Application Platforms
+6083;SAP Oil and Gas;1;1;0;Business Applications
+6084;EJB 3.0;1;0;0;Libraries, Frameworks & Software Standards
+6091;Haskell;1;1;0;Programming Languages
+6092;VHDL;1;1;0;Miscellaneous
+6093;MSMQ;1;0;0;Libraries, Frameworks & Software Standards
+6097;HTTPS;0;1;0;Communications & Networking
+6098;hybris;1;0;0;Vendors
+6100;AWK;1;1;0;Programming Languages
+6102;Sophos;1;0;0;Vendors
+6103;QMS;1;0;0;Processes & Methodologies
+6104;InfoPath;1;0;0;Applications
+6105;Qt;1;1;0;Libraries, Frameworks & Software Standards
+6107;VCAP;1;0;0;Qualifications
+6113;Java RMI;1;1;0;Libraries, Frameworks & Software Standards
+6118;Norton AntiVirus;1;1;0;Systems Management
+6120;Xcelsius;1;1;0;Database & Business Intelligence
+6124;H.323;1;0;0;Communications & Networking
+6125;WebTrends;1;0;0;Business Applications
+6129;Oracle BPM;1;1;0;Business Applications
+6130;RSS;1;0;0;Libraries, Frameworks & Software Standards
+6132;Excel;1;0;4983;Applications
+6136;BIG-IP;1;0;0;Communications & Networking
+6138;Progress;1;1;0;Vendors
+6140;DSL;1;0;0;Communications & Networking
+6145;FWSM;1;0;0;Communications & Networking
+6146;Embedded Linux;1;0;0;Operating Systems
+6148;Windows Phone 7;1;1;0;Operating Systems
+6149;CMDB;1;0;0;Miscellaneous
+6150;Oracle Application Server;1;1;0;Application Platforms
+6152;Sun Certification;1;0;5335;Qualifications
+6154;NetScreen;1;0;0;Communications & Networking
+6156;MSI;1;0;0;Development Applications
+6159;Photoshop Designer;1;0;5143;Applications
+6160;nginx;1;1;0;Application Platforms
+6161;Oracle ERP;1;1;0;Business Applications
+6163;Novell;1;1;0;Vendors
+6164;WinRunner;1;1;0;Development Applications
+6171;2G;1;1;0;Communications & Networking
+6173;HP ASE;1;0;0;Qualifications
+6175;BSS;1;0;0;Not Yet Defined
+6176;IVR;1;0;0;Miscellaneous
+6178;Monte Carlo Method;1;1;0;Processes & Methodologies
+6183;Apache Wicket;1;1;0;Libraries, Frameworks & Software Standards
+6192;Celerra;1;0;0;Miscellaneous
+6193;SAP SCM;1;1;0;Business Applications
+6199;CEH;1;0;0;Qualifications
+6204;SQLite;1;1;0;Database & Business Intelligence
+6205;SDH;1;0;0;Communications & Networking
+6206;CCEE;1;1;0;Qualifications
+6207;Mac OS;1;1;0;Operating Systems
+6209;DevExpress;1;0;0;Vendors
+6210;Wireshark;1;1;0;Communications & Networking
+6213;RIP;1;0;0;Communications & Networking
+6215;EFT;1;0;0;Miscellaneous
+6216;XML Messaging;1;1;0;Libraries, Frameworks & Software Standards
+6218;Asterisk PBX;1;1;0;Communications & Networking
+6220;Control-M;1;0;0;Systems Management
+6221;RTP;1;0;0;Communications & Networking
+6222;CCDA;1;1;0;Qualifications
+6224;Interwoven;1;0;0;Vendors
+6226;Star Schema;1;1;0;Database & Business Intelligence
+6227;Riverbed;1;0;0;Vendors
+6228;Windows CE;1;1;0;Operating Systems
+6229;Agresso;1;1;0;Business Applications
+6230;PaaS;1;1;0;Cloud Services
+6231;SAP FSCM;1;1;0;Business Applications
+6233;Apache Cassandra;1;1;0;Database & Business Intelligence
+6234;RSpec;1;1;0;Development Applications
+6241;SCADA;1;0;0;Miscellaneous
+6243;Rational DOORS;1;1;0;Development Applications
+6244;InDesign;1;1;0;Applications
+6245;Oracle APEX;1;1;0;Development Applications
+6248;ION Trading;1;0;0;Vendors
+6252;Calypso;1;0;0;Vendors
+6254;JavaBeans;1;0;4971;Libraries, Frameworks & Software Standards
+6256;MSBuild;1;1;0;Development Applications
+6257;DotNetNuke;1;1;0;Application Platforms
+6258;Veritas Cluster Server;1;1;0;System Software
+6259;SAP Retail;1;1;0;Business Applications
+6265;LabVIEW;1;0;0;Development Applications
+6266;SunGard;1;1;0;Vendors
+6268;Clojure;1;1;0;Programming Languages
+6272;CiscoWorks;1;1;0;Systems Management
+6275;EDRMS;1;0;0;Database & Business Intelligence
+6278;ISDN;1;0;0;Communications & Networking
+6279;WebDriver;1;1;0;Development Applications
+6281;ClearQuest;1;1;0;Development Applications
+6283;CTI;1;0;0;Communications & Networking
+6284;PDM;1;0;0;Processes & Methodologies
+6287;PHPUnit;1;0;4996;Development Applications
+6289;BPMN;1;0;0;Processes & Methodologies
+6292;JDeveloper;1;1;0;Development Applications
+6293;Samba;1;1;0;System Software
+6300;Sendmail;1;1;0;System Software
+6301;HP MASE;1;0;0;Qualifications
+6303;TestComplete;1;1;0;Development Applications
+6304;SQLPlus;1;1;0;Database & Business Intelligence
+6306;Pega;1;0;0;Vendors
+6308;ISMS;1;0;0;Processes & Methodologies
+6309;APMP;1;0;0;Qualifications
+6310;DTV;1;0;0;Miscellaneous
+6311;Base SAS;1;0;0;Database & Business Intelligence
+6313;PCI QSA;1;0;0;Qualifications
+6317;Netezza;1;0;0;Vendors
+6318;SSADM;1;1;0;Processes & Methodologies
+6325;Terminal Server;1;0;0;System Software
+6326;ProCurve;1;0;0;Vendors
+6327;LANDesk;1;0;0;Vendors
+6328;Cisco UCCX;1;1;0;Systems Management
+6331;thinkFolio;1;0;0;Vendors
+6334;Lotus Domino;1;1;0;Application Platforms
+6336;Alfresco;1;1;0;Application Platforms
+6338;Alterian;1;0;0;Vendors
+6341;webMethods;1;1;0;Vendors
+6343;VMS;1;0;0;Operating Systems
+6344;DRM;1;0;0;Processes & Methodologies
+6351;Chemistry;1;0;0;Miscellaneous
+6354;Node.js;1;1;0;Application Platforms
+6355;Memcached;1;1;0;Libraries, Frameworks & Software Standards
+6357;Maximo;1;1;0;Business Applications
+6358;ProC;1;0;0;Development Applications
+6368;TIBCO EMS;1;1;0;Application Platforms
+6370;LiveLink;1;0;0;Application Platforms
+6371;BAPI;1;0;0;Libraries, Frameworks & Software Standards
+6372;SAP HCM;1;1;0;Business Applications
+6376;Vignette;1;1;0;Vendors
+6377;jMock;1;0;0;Development Applications
+6382;Postfix;1;1;0;System Software
+6383;SAP WM;1;1;0;Business Applications
+6387;VxWorks;1;1;0;Operating Systems
+6389;SAP APO;1;1;0;Business Applications
+6391;Symmetrix;1;0;0;Miscellaneous
+6395;EqualLogic;1;0;0;Miscellaneous
+6399;BMC PATROL;1;1;0;Systems Management
+6401;TestNG;1;0;0;Development Applications
+6405;PLM;1;0;0;Processes & Methodologies
+6406;Confluence;1;1;0;Application Platforms
+6407;Taxonomies;1;0;0;Miscellaneous
+6410;FreeMarker;1;0;0;Libraries, Frameworks & Software Standards
+6411;AOP;1;0;0;Processes & Methodologies
+6412;XAML;1;1;0;Programming Languages
+6414;WCAG;1;0;0;Quality Assurance & Compliance
+6415;Rational Rose;1;1;0;Development Applications
+6421;Simulink;1;0;0;Applications
+6422;NetBeans;1;0;0;Development Applications
+6426;ReSharper;1;1;0;Development Applications
+6427;Pivotal CRM;1;0;0;Business Applications
+6428;JCL;1;0;0;Programming Languages
+6429;HP AIS;1;0;0;Qualifications
+6435;Tandberg;1;0;0;Vendors
+6436;Kerberos;1;0;0;Communications & Networking
+6438;Amazon S3;1;1;0;Cloud Services
+6440;Cacti;1;1;0;Systems Management
+6445;Atlassian;1;1;0;Vendors
+6447;Synon;1;0;0;Development Applications
+6448;CORBA;1;1;0;Libraries, Frameworks & Software Standards
+6449;ADO;1;1;0;Libraries, Frameworks & Software Standards
+6450;Capita;1;0;0;Vendors
+6451;SCVMM;1;0;0;Systems Management
+6455;Lisp;1;1;0;Programming Languages
+6459;Oracle HRMS;1;0;6732;Business Applications
+6461;ARCserve;1;1;0;Systems Management
+6463;BladeLogic;1;0;0;Systems Management
+6465;FileNet;1;0;0;Application Platforms
+6467;FatWire;1;0;0;Vendors
+6468;DCOM;1;0;0;Libraries, Frameworks & Software Standards
+6474;JAXB;1;0;0;Libraries, Frameworks & Software Standards
+6477;HSPA;1;0;0;Communications & Networking
+6478;CESG;1;0;0;Miscellaneous
+6479;VCL;1;0;0;Libraries, Frameworks & Software Standards
+6480;RMADS;1;0;0;Miscellaneous
+6483;UAG;1;0;0;System Software
+6486;Verilog;1;0;0;Miscellaneous
+6488;Netcool;1;1;0;Systems Management
+6490;Smarty;1;1;0;Libraries, Frameworks & Software Standards
+6495;Acrobat;1;0;9366;Applications
+6496;OWASP;1;0;0;Processes & Methodologies
+6500;XQuery;1;1;0;Programming Languages
+6505;Telerik;1;0;0;Vendors
+6507;MapReduce;1;1;0;Processes & Methodologies
+6517;LatentZero;1;0;0;Business Applications
+6519;BS7799;1;1;0;Quality Assurance & Compliance
+6520;STB;1;0;0;Miscellaneous
+6521;Reactive Extensions;1;1;0;Libraries, Frameworks & Software Standards
+6522;ERwin;1;0;0;Development Applications
+6523;Legato;1;0;0;Systems Management
+6526;EMC NetWorker;1;1;0;Systems Management
+6528;MSTest;1;0;0;Development Applications
+6530;DWDM;1;0;0;Communications & Networking
+6531;Tapestry;1;0;0;Libraries, Frameworks & Software Standards
+6534;JSUnit;1;0;0;Development Applications
+6537;MetaFrame;1;0;0;System Software
+6540;SAP Logistics;1;1;0;Business Applications
+6541;Siebel Analytics;1;1;0;Business Applications
+6544;WAI;1;0;0;Quality Assurance & Compliance
+6546;Bamboo;1;1;0;Development Applications
+6547;JAX-WS;1;0;0;Libraries, Frameworks & Software Standards
+6548;OSGi;1;0;0;Libraries, Frameworks & Software Standards
+6549;ATL;1;1;0;Libraries, Frameworks & Software Standards
+6550;Oracle Exadata;1;1;0;Database & Business Intelligence
+6554;HP SIM;1;0;0;Systems Management
+6557;PABX;1;1;0;Communications & Networking
+6565;WAAS;1;0;0;Communications & Networking
+6567;TeamSite;1;0;0;Application Platforms
+6571;Polycom;1;0;0;Vendors
+6573;SAP Security;1;1;0;Processes & Methodologies
+6574;soapUI;1;1;0;Development Applications
+6579;WFM;1;0;0;Processes & Methodologies
+6580;IPv6;1;0;0;Communications & Networking
+6583;Oracle BI;1;1;0;Database & Business Intelligence
+6584;WebCenter;1;0;0;Libraries, Frameworks & Software Standards
+6585;COM+;1;1;0;Libraries, Frameworks & Software Standards
+6586;JProfiler;1;1;0;Development Applications
+6587;SAP PI;1;1;0;Libraries, Frameworks & Software Standards
+6588;Liferay;1;1;0;Application Platforms
+6589;PSTN;1;0;0;Communications & Networking
+6591;IronPort;1;0;0;Vendors
+6592;CLAS;1;1;0;Not Yet Defined
+6597;JTAG;1;0;0;Quality Assurance & Compliance
+6599;4G;1;1;0;Communications & Networking
+6603;SAP GRC;1;1;0;Business Applications
+6607;PowerCenter;1;0;0;Database & Business Intelligence
+6608;zOS;1;1;0;Operating Systems
+6609;WatchGuard;1;0;0;Vendors
+6615;PlateSpin;1;0;0;Vendors
+6620;IMAP;1;0;0;Communications & Networking
+6621;Endur;1;0;0;Business Applications
+6627;MKS;1;0;0;Vendors
+6628;DVB;1;0;0;Communications & Networking
+6632;OCaml;1;0;0;Programming Languages
+6636;PowerHouse;1;0;0;Programming Languages
+6637;SalesLogix;1;0;0;Business Applications
+6639;OCP;1;1;0;Qualifications
+6642;Google Maps API;1;1;0;Libraries, Frameworks & Software Standards
+6647;Northgate;1;0;0;Vendors
+6649;Visual Studio Team System;1;1;0;Development Applications
+6651;SCCP;1;1;0;Communications & Networking
+6654;HACMP;1;0;0;Miscellaneous
+6656;ProClarity;1;0;0;Database & Business Intelligence
+6657;WDK;1;1;0;Libraries, Frameworks & Software Standards
+6658;SAS Enterprise Guide;1;1;0;Database & Business Intelligence
+6659;HP Data Protector;1;0;0;Systems Management
+6661;Fortinet;1;0;0;Vendors
+6663;POP3;1;1;0;Communications & Networking
+6665;Oracle ADF;1;1;0;Libraries, Frameworks & Software Standards
+6667;HOOD;1;0;0;Processes & Methodologies
+6669;WebSpeed;1;0;0;Development Applications
+6670;SS7;1;0;0;Communications & Networking
+6671;Ektron;1;0;0;Vendors
+6672;Red Gate;1;1;0;Vendors
+6673;IntelliJ;1;1;0;Development Applications
+6678;Junos;1;0;0;Communications & Networking
+6681;JCAPS;1;1;0;Application Platforms
+6686;Unica;1;0;0;Vendors
+6688;SAP Portal;1;1;0;Application Platforms
+6689;Oracle iProcurement;1;1;0;Business Applications
+6691;Rational Robot;1;1;0;Development Applications
+6696;DirectX;1;1;0;Libraries, Frameworks & Software Standards
+6697;Mercator;1;0;0;Vendors
+6705;SysML;1;0;0;Processes & Methodologies
+6711;SAP ALE;1;1;0;Libraries, Frameworks & Software Standards
+6712;HBase;1;0;0;Database & Business Intelligence
+6718;CHAID;1;0;0;Processes & Methodologies
+6720;VPLS;1;0;0;Communications & Networking
+6721;E-Discovery;1;0;0;Processes & Methodologies
+6725;PeopleSoft Financials;1;1;0;Business Applications
+6726;AMQP;1;1;0;Communications & Networking
+6727;SAP Payroll;1;1;0;Business Applications
+6730;WATIR;1;0;0;Development Applications
+6731;Lua;1;1;0;Programming Languages
+6732;Oracle HR;1;1;0;Business Applications
+6735;Redis;1;1;0;Database & Business Intelligence
+6738;Fortran;1;1;0;Programming Languages
+6740;LSMW;1;0;0;Development Applications
+6744;Hitwise;1;0;0;Vendors
+6745;NFC;1;0;0;Communications & Networking
+6748;Trillium;1;0;0;Vendors
+6749;Aruba;1;1;0;Vendors
+6750;Nessus;1;0;0;Systems Management
+6752;Balsamiq Mockups;1;1;0;Development Applications
+6755;Struts2;1;0;5194;Libraries, Frameworks & Software Standards
+6762;Chordiant;1;1;0;Vendors
+6765;Rational Rhapsody;1;1;0;Development Applications
+6776;CAML;1;0;0;Libraries, Frameworks & Software Standards
+6777;CCAA;1;0;0;Qualifications
+6778;GCC;1;0;0;Development Applications
+6781;Temenos T24;1;0;0;Business Applications
+6783;OpenUP;1;1;0;Processes & Methodologies
+6787;OpenEdge;1;1;0;Application Platforms
+6793;PowerPivot;1;0;0;Applications
+6797;OpenLDAP;1;1;0;Communications & Networking
+6801;Misys;1;1;0;Vendors
+6803;SVG;1;1;0;Libraries, Frameworks & Software Standards
+6806;Squid;1;0;0;System Software
+6808;Pegasus;1;0;0;Vendors
+6811;MOS;1;0;0;Qualifications
+6815;CODA;1;0;0;Vendors
+6816;Huawei;1;1;0;Vendors
+6818;Smart Meter;1;0;0;Miscellaneous
+6819;Foundry;1;0;0;Vendors
+6820;JNCIS;1;0;0;Qualifications
+6821;Coremetrics;1;0;0;Vendors
+6822;iBATIS;1;1;0;Libraries, Frameworks & Software Standards
+6823;DataFlux;1;0;0;Vendors
+6825;DNA;1;0;0;Processes & Methodologies
+6826;CDMA;1;0;0;Communications & Networking
+6827;QNX;1;0;0;Vendors
+6828;CGI;1;0;0;Libraries, Frameworks & Software Standards
+6829;Sitefinity;1;0;0;Application Platforms
+6833;Drools;1;1;0;Libraries, Frameworks & Software Standards
+6834;Jython;1;1;0;Programming Languages
+6836;CAE;1;1;0;Processes & Methodologies
+6837;LIMS;1;0;0;Miscellaneous
+6842;Mockito;1;0;0;Development Applications
+6843;Avaloq;1;0;0;Vendors
+6844;DB2 UDB;1;1;0;Database & Business Intelligence
+6845;SAP PM;1;1;0;Business Applications
+6848;TELNET;1;0;0;Communications & Networking
+6852;DoDAF;1;0;0;Processes & Methodologies
+6853;ZigBee;1;1;0;Communications & Networking
+6854;PowerBuilder;1;1;0;Development Applications
+6858;GIAC;1;0;0;Qualifications
+6860;Symmetrix DMX;1;0;0;Miscellaneous
+6861;TickIT;1;0;0;Quality Assurance & Compliance
+6862;ION MarketView;1;0;0;Business Applications
+6867;HP StorageWorks;1;1;0;Miscellaneous
+6871;VRRP;1;0;0;Communications & Networking
+6874;SonicWALL;1;0;0;Vendors
+6877;CA Clarity;1;0;5731;Business Applications
+6884;EAM;1;0;0;Processes & Methodologies
+6885;Unicenter;1;1;0;Systems Management
+6889;Progress 4GL;1;1;0;Programming Languages
+6890;Akamai;1;1;0;Vendors
+6892;SecurID;1;0;0;Miscellaneous
+6898;RDF;1;0;0;Processes & Methodologies
+6899;Human Factors;1;0;0;Miscellaneous
+6902;Sophis;1;0;0;Vendors
+6910;ASIC;1;1;0;Miscellaneous
+6913;CFA;1;0;0;Qualifications
+6917;CouchDB;1;1;0;Database & Business Intelligence
+6924;OAuth;1;0;0;Libraries, Frameworks & Software Standards
+6926;AquaLogic;1;1;0;Application Platforms
+6929;Capistrano;1;1;0;Systems Management
+6930;NCover;1;0;0;Development Applications
+6932;Tivoli Workload Scheduler;1;1;0;System Software
+6934;Veeam;1;0;0;Vendors
+6936;SAP IS-Retail;1;1;0;Business Applications
+6940;Frame Relay;1;0;0;Communications & Networking
+6942;WatiN;1;1;0;Development Applications
+6945;Oracle CRM;1;1;0;Business Applications
+6948;Mingle;1;0;0;Applications
+6951;Backbone.js;1;0;9371;Libraries, Frameworks & Software Standards
+6953;802.11;1;1;0;Communications & Networking
+6954;ADA;1;1;0;Programming Languages
+6957;Kofax;1;0;0;Vendors
+6958;Infor;1;0;0;Vendors
+6959;Adobe AIR;1;1;0;Libraries, Frameworks & Software Standards
+6960;Lawson;1;0;0;Business Applications
+6965;Loan IQ;1;0;0;Business Applications
+6968;SAP IS-U;1;1;0;Business Applications
+6969;Redback;1;0;0;Vendors
+6970;JBPM;1;1;0;Libraries, Frameworks & Software Standards
+6977;DMAIC;1;0;0;Processes & Methodologies
+6979;Google Guice;1;1;0;Libraries, Frameworks & Software Standards
+6986;Mapinfo;1;0;0;Vendors
+6988;HP APS;1;0;0;Qualifications
+6989;CESG CLAS;1;0;0;Miscellaneous
+6991;FrameMaker;1;0;0;Applications
+6992;Triple Point;1;0;0;Vendors
+6993;Oracle General Ledger;1;1;0;Business Applications
+6994;Expression Blend;1;1;0;Development Applications
+6996;SAML;1;0;0;Libraries, Frameworks & Software Standards
+6997;SAPscript;1;1;0;Programming Languages
+7000;Visualfiles;1;0;0;Business Applications
+7007;Flash Builder;1;1;0;Development Applications
+7011;Kentico;1;0;0;Application Platforms
+7012;TACACS;1;0;0;Communications & Networking
+7013;e-Health;1;0;0;Miscellaneous
+7014;PeopleSoft HRMS;1;1;0;Business Applications
+7018;LogLogic;1;0;0;Vendors
+7019;SimCorp;1;0;0;Vendors
+7020;Oracle Linux;0;0;0;Operating Systems
+7024;NEC;1;0;0;Vendors
+7025;NDepend;1;0;0;Development Applications
+7028;RFID;1;1;0;Communications & Networking
+7029;TETRA;1;0;0;Communications & Networking
+7032;HMG Infosec;1;0;0;Quality Assurance & Compliance
+7036;Genesys;1;0;0;Vendors
+7038;Metastorm;1;0;0;Vendors
+7040;EMV;1;0;0;Miscellaneous
+7042;Line 500;1;0;0;Business Applications
+7043;Mule;1;0;0;Application Platforms
+7047;SAP MDM;1;1;0;Business Applications
+7048;ExpressionEngine;1;0;0;Application Platforms
+7052;IIBA;1;0;0;Qualifications
+7056;MorphX;1;0;0;Development Applications
+7057;JSR 170;1;0;0;Libraries, Frameworks & Software Standards
+7058;Chip and PIN;1;0;0;Miscellaneous
+7059;RequisitePro;1;0;0;Development Applications
+7064;SilkTest;1;1;0;Development Applications
+7068;Temenos;1;0;0;Vendors
+7075;Primavera;1;0;0;Vendors
+7076;RHCT;1;1;0;Qualifications
+7078;vCloud;1;1;0;System Software
+7079;KDB;1;0;0;Database & Business Intelligence
+7080;Eagle PACE;1;0;0;Business Applications
+7083;FxCop;1;0;0;Development Applications
+7089;Tridion;1;0;0;Business Applications
+7090;LLU;1;0;0;Communications & Networking
+7091;tcpdump;1;0;0;Communications & Networking
+7095;JBehave;1;0;0;Development Applications
+7099;SAS Macro;1;1;0;Programming Languages
+7102;FoxPro;1;1;0;Database & Business Intelligence
+7103;PPP;1;0;0;Communications & Networking
+7107;AutoCAD;1;1;0;Applications
+7111;Tealeaf;1;0;0;Vendors
+7112;GigaSpaces;1;0;0;Vendors
+7113;Kinect;1;0;0;Miscellaneous
+7114;BusinessWorks;1;0;0;Business Applications
+7119;Earned Value Management;1;0;0;Processes & Methodologies
+7122;Fedora;1;1;0;Operating Systems
+7123;SAP SRM;1;1;0;Business Applications
+7125;OLE;1;0;0;Libraries, Frameworks & Software Standards
+7126;MOF;1;0;0;Processes & Methodologies
+7127;Bourne shell;1;1;0;Programming Languages
+7129;MPEG;1;0;0;Miscellaneous
+7130;Bluetooth;1;1;0;Communications & Networking
+7133;NetWare;1;1;0;Operating Systems
+7136;JRules;1;0;0;Libraries, Frameworks & Software Standards
+7137;Adobe After Effects;1;1;0;Applications
+7139;SAP Smart Forms;1;1;0;Libraries, Frameworks & Software Standards
+7142;S-PLUS;1;0;0;Applications
+7145;Jackrabbit;1;0;0;Database & Business Intelligence
+7150;Snort;1;0;0;System Software
+7156;Actuate;1;0;9385;Vendors
+7161;FreeBSD;1;1;0;Operating Systems
+7164;DO-178B;1;0;0;Quality Assurance & Compliance
+7171;Talend Open Studio;1;0;0;Development Applications
+7185;QSIG;1;0;0;Communications & Networking
+7193;StructureMap;1;0;0;Libraries, Frameworks & Software Standards
+7198;Tableau;1;0;0;Vendors
+7202;Postini;1;0;0;Vendors
+7206;XML-RPC;1;1;0;Libraries, Frameworks & Software Standards
+7207;DPNSS;1;0;0;Communications & Networking
+7213;SilkPerformer;1;1;0;Development Applications
+7219;OpenBSD;1;1;0;Operating Systems
+7221;Spring Web Flow;1;0;5020;Libraries, Frameworks & Software Standards
+7222;SolarWinds Orion;1;0;0;Systems Management
+7223;Cognos Powerplay;1;1;0;Database & Business Intelligence
+7224;NCR;1;0;0;Vendors
+7225;Red Hat Satellite;1;1;0;Systems Management
+7227;Kerridge;1;0;0;Not Yet Defined
+7232;Visual Studio Tools for Office;1;1;0;Development Applications
+7236;WiMAX;1;1;0;Communications & Networking
+7239;SAP QM;1;1;0;Business Applications
+7240;Oracle Spatial;1;1;0;Application Platforms
+7241;SAP Business One;1;1;0;Business Applications
+7243;Firebird;1;0;0;Database & Business Intelligence
+7244;VLDB;1;0;0;Database & Business Intelligence
+7245;Pthreads;1;0;0;Libraries, Frameworks & Software Standards
+7248;HL7;1;0;0;Quality Assurance & Compliance
+7249;Movex;1;1;0;Business Applications
+7251;QALoad;1;0;0;Development Applications
+7252;WebLOAD;1;0;0;Development Applications
+7253;Oracle 10gAS;0;0;0;Application Platforms
+7257;CATIA;1;0;0;Applications
+7258;JDE World;1;1;0;Not Yet Defined
+7261;Adobe Premiere;1;1;0;Applications
+7262;RedPrairie;1;1;0;Vendors
+7263;MediaWiki;1;0;0;Application Platforms
+7266;Crossbeam;1;0;0;Vendors
+7267;UTRAN;1;0;0;Communications & Networking
+7268;eTOM;1;0;0;Processes & Methodologies
+7269;NGN;1;0;0;Communications & Networking
+7271;Tivoli Identity Manager;1;1;0;Systems Management
+7272;Cairngorm;1;1;0;Libraries, Frameworks & Software Standards
+7273;PureMVC;1;1;0;Libraries, Frameworks & Software Standards
+7275;OpenVPN;1;1;0;Communications & Networking
+7280;Apache Axis;1;1;0;Libraries, Frameworks & Software Standards
+7283;Epicor;1;0;0;Vendors
+7287;NetSuite;1;0;0;Vendors
+7288;Solaris Administrator;1;0;5112;Not Yet Defined
+7291;CIPFA;1;0;0;Qualifications
+7292;Navision;1;1;0;Business Applications
+7293;InterSystems;1;0;0;Vendors
+7302;SAP PS;1;1;0;Business Applications
+7304;Redmine;1;1;0;Development Applications
+7306;PVCS;1;0;0;Development Applications
+7310;RoboHelp;1;0;0;Applications
+7311;MVS;1;0;0;Operating Systems
+7313;Facelets;1;0;0;Libraries, Frameworks & Software Standards
+7319;FpML;1;0;0;Libraries, Frameworks & Software Standards
+7321;INSURE/90;1;0;0;Business Applications
+7322;MSF;1;0;0;Processes & Methodologies
+7325;DecisionStream;1;0;0;Database & Business Intelligence
+7326;Linedata;1;0;0;Vendors
+7327;Log4Net;1;0;0;Development Applications
+7329;XNA;1;1;0;Libraries, Frameworks & Software Standards
+7330;FastStats;1;0;0;Applications
+7334;EPiServer CMS;1;0;0;Application Platforms
+7335;WiX;1;1;0;Development Applications
+7339;Ingres;1;0;0;Database & Business Intelligence
+7341;Hummingbird;1;0;0;Vendors
+7347;LiveSite;1;0;0;Not Yet Defined
+7348;Black-Scholes;1;0;0;Processes & Methodologies
+7349;XBRL;1;1;0;Libraries, Frameworks & Software Standards
+7350;OLE DB;1;0;0;Libraries, Frameworks & Software Standards
+7355;TortoiseSVN;1;1;0;Development Applications
+7359;OpenSSO;1;1;0;Systems Management
+7360;FlexUnit;1;0;0;Development Applications
+7364;Brio;1;0;0;Not Yet Defined
+7365;Cisco Voice;1;1;0;Communications & Networking
+7366;Oracle HTTP Server;0;0;0;Application Platforms
+7368;CA Wily;1;0;5731;Systems Management
+7371;OutlookSoft;1;0;0;Not Yet Defined
+7373;JRun;1;0;0;Not Yet Defined
+7378;Nimsoft;1;0;0;Vendors
+7379;iRise;1;0;0;Vendors
+7383;JNCIE;1;0;0;Qualifications
+7384;iPhone SDK;1;1;0;Libraries, Frameworks & Software Standards
+7385;Sourcefire;1;0;0;Vendors
+7386;CBAP;1;0;0;Qualifications
+7389;QiCA;1;0;0;Qualifications
+7391;SAS Insight Analyst;1;1;0;Not Yet Defined
+7392;Terracotta;1;0;0;Vendors
+7396;Cordys;1;0;0;Business Applications
+7400;CCENT;1;1;0;Qualifications
+7406;ESRI;1;0;0;Vendors
+7408;SQL Azure;1;1;0;Database & Business Intelligence
+7409;qmail;1;0;0;System Software
+7413;Sybase ASE;1;1;0;Database & Business Intelligence
+7416;NVQ Level 3;1;0;0;Qualifications
+7422;Quark;1;0;0;Vendors
+7424;Exchange;1;0;5038;Application Platforms
+7428;Windows Identity Foundation;1;1;0;Libraries, Frameworks & Software Standards
+7433;WMI;1;1;0;Systems Management
+7434;Green Hills;1;1;0;Vendors
+7435;Line 50;1;0;0;Business Applications
+7436;Greenplum;1;1;0;Vendors
+7439;DataPower;1;0;0;Miscellaneous
+7441;Planview;1;0;0;Vendors
+7448;Wonderware;1;1;0;Vendors
+7451;AppFabric;1;1;0;Libraries, Frameworks & Software Standards
+7452;SPARQL;1;0;0;Programming Languages
+7453;TippingPoint;1;0;0;Vendors
+7454;Compuware;1;0;0;Vendors
+7455;3ds Max;1;1;0;Applications
+7463;Wise Package Studio;1;1;0;Development Applications
+7464;OBIEE;1;1;0;Not Yet Defined
+7467;Introscope;1;0;0;Development Applications
+7471;Lombardi;1;0;0;Development Applications
+7472;CIPD;1;0;0;Qualifications
+7474;Infoblox;1;0;0;Vendors
+7476;Nucleus RTOS;1;0;0;Operating Systems
+7478;Micro Focus;1;0;0;Vendors
+7480;OpenDeploy;1;1;0;Not Yet Defined
+7481;TestPartner;1;0;0;Development Applications
+7482;InterSystems Cache;1;0;0;Database & Business Intelligence
+7483;NWDI;1;0;0;Development Applications
+7484;Fiserv;1;0;0;Vendors
+7486;Pro/ENGINEER;1;0;0;Applications
+7487;SoftGrid;1;0;0;Not Yet Defined
+7488;SCORM;1;0;0;Miscellaneous
+7491;BS25999;1;1;0;Quality Assurance & Compliance
+7495;Sphinx;1;0;0;Libraries, Frameworks & Software Standards
+7500;Tuxedo;1;0;0;Application Platforms
+7506;Qualys;1;0;0;Vendors
+7507;NETGEAR;1;0;0;Vendors
+7508;GAMP;1;0;0;Quality Assurance & Compliance
+7509;SonicMQ;1;0;0;Libraries, Frameworks & Software Standards
+7510;BASE24;1;0;0;Business Applications
+7511;Acronis;1;0;0;Vendors
+7516;Immediacy CMS;1;0;0;Application Platforms
+7519;JNCIP;1;0;0;Qualifications
+7520;L2TP;1;0;0;Communications & Networking
+7521;Concordion;1;0;0;Development Applications
+7523;Stellent;1;0;0;Vendors
+7524;Beauchamp;1;0;0;Business Applications
+7528;Thunderhead;1;0;0;Vendors
+7529;RedDot;1;0;0;Vendors
+7531;Oracle Exalogic;1;1;0;Miscellaneous
+7534;SSCP;1;0;0;Qualifications
+7535;Cisco UCCE;1;1;0;Systems Management
+7537;SimCorp Dimension;1;0;0;Business Applications
+7539;WSH;1;0;0;Libraries, Frameworks & Software Standards
+7540;SCJP;1;1;0;Qualifications
+7546;Civica;1;0;0;Vendors
+7547;XMPP;1;1;0;Libraries, Frameworks & Software Standards
+7549;StatPro;1;0;0;Vendors
+7550;ECMAScript;1;0;0;Programming Languages
+7551;PACS;1;0;0;Miscellaneous
+7553;FrontPage;1;1;0;Development Applications
+7555;VirtualBox;1;0;0;System Software
+7557;SCJA;1;1;0;Qualifications
+7562;GL TRADE;1;0;0;Vendors
+7564;PrintSoft PReS;1;0;0;Applications
+7565;IEC 61508;1;0;0;Quality Assurance & Compliance
+7567;ZABBIX;1;1;0;Systems Management
+7568;Ganglia;1;1;0;Systems Management
+7570;GLSL;1;0;0;Programming Languages
+7575;LPAR;1;0;0;Miscellaneous
+7577;Cisco ICM;1;1;0;Communications & Networking
+7581;JDE OneWorld;1;1;0;Business Applications
+7584;PeopleTools;1;0;0;Development Applications
+7587;SeeBeyond;1;0;0;Not Yet Defined
+7591;SGSN;1;0;0;Communications & Networking
+7595;Maya;1;1;0;Applications
+7596;Clearswift;1;0;0;Vendors
+7599;Barracuda Networks;1;0;0;Vendors
+7600;JDE EnterpriseOne;1;1;0;Business Applications
+7602;ECDL;1;0;0;Qualifications
+7604;SproutCore;1;0;0;Libraries, Frameworks & Software Standards
+7616;ArcGIS;1;0;0;Application Platforms
+7617;Baan;1;1;0;Vendors
+7618;REXX;1;0;0;Programming Languages
+7621;CCDE;1;0;0;Qualifications
+7624;Reverse Proxy;1;0;0;Communications & Networking
+7627;Oracle Identity Management;1;1;0;Systems Management
+7629;Log4j;1;0;0;Development Applications
+7630;OCA;1;1;0;Qualifications
+7644;RTCP;1;0;0;Communications & Networking
+7645;GDB;1;0;0;Development Applications
+7647;Kaspersky;1;1;0;Vendors
+7648;webOS;1;0;0;Operating Systems
+7652;Oracle Data Warehouse;1;1;0;Database & Business Intelligence
+7653;CTC Cleared;1;0;0;Qualifications
+7654;Pentaho;1;1;0;Database & Business Intelligence
+7655;Front Arena;1;0;0;Business Applications
+7656;Jolt;1;0;0;Not Yet Defined
+7663;Novell eDirectory;1;1;0;System Software
+7669;MUMPS;1;0;0;Programming Languages
+7670;AWT;1;0;0;Libraries, Frameworks & Software Standards
+7673;Resin;1;0;0;Application Platforms
+7677;GxP;1;0;0;Quality Assurance & Compliance
+7679;GNU Toolchain;1;0;0;Development Applications
+7680;Rackspace Cloud;1;0;0;Cloud Services
+7681;Cobbler;1;0;0;Systems Management
+7689;OpenSocial;1;1;0;Not Yet Defined
+7690;Pocket PC;1;0;0;Miscellaneous
+7701;Cadence;1;0;0;Vendors
+7703;SAP EP;1;1;0;Application Platforms
+7707;FLEXCUBE;1;1;0;Business Applications
+7708;Sage MMS;1;1;0;Business Applications
+7711;SAP Business Workflow;1;1;0;Libraries, Frameworks & Software Standards
+7713;EMC Navisphere;1;1;0;Systems Management
+7715;SAP HANA;1;1;0;Database & Business Intelligence
+7722;Site Server;1;0;0;Application Platforms
+7723;MRTG;1;0;0;Communications & Networking
+7726;Patsystems;1;0;0;Not Yet Defined
+7728;LiveCycle;1;0;0;Application Platforms
+7729;QADirector;1;0;0;Not Yet Defined
+7732;Access;1;0;5438;Database & Business Intelligence
+7734;ICMP;1;0;0;Communications & Networking
+7736;Stripes Framework;1;0;0;Libraries, Frameworks & Software Standards
+7737;Augmented Reality;1;1;0;Miscellaneous
+7741;CollabNet;1;0;0;Vendors
+7744;Novell Identity Manager;1;1;0;Systems Management
+7745;CDMA2000;1;0;0;Communications & Networking
+7746;Nortel Meridian;1;1;0;Communications & Networking
+7747;Orchard;1;0;0;Vendors
+7750;DATAllegro;1;0;0;Not Yet Defined
+7751;SimpleDB;1;0;0;Database & Business Intelligence
+7752;SubSonic;1;0;0;Libraries, Frameworks & Software Standards
+7754;MIMEsweeper;1;0;0;Systems Management
+7755;VXML;1;1;0;Libraries, Frameworks & Software Standards
+7758;Ehcache;1;0;0;Libraries, Frameworks & Software Standards
+7760;SAP PLM;1;1;0;Business Applications
+7763;Flash Media Server;1;1;0;Application Platforms
+7767;Ionix;1;0;0;Not Yet Defined
+7772;Q.931;1;0;0;Communications & Networking
+7773;DEFINITY;1;0;0;Communications & Networking
+7774;Global One;1;0;0;Business Applications
+7775;GCIA;1;0;0;Qualifications
+7780;Kaseya;1;0;0;Vendors
+7783;Java ME;1;0;5693;Libraries, Frameworks & Software Standards
+7784;EasyScreen;1;0;0;Not Yet Defined
+7793;UC4;1;0;0;Not Yet Defined
+7794;CoffeeScript;1;1;0;Programming Languages
+7795;SRDF;1;0;0;System Software
+7797;IGRP;1;0;0;Communications & Networking
+7804;SugarCRM;1;1;0;Application Platforms
+7809;Sage BI;1;1;0;Business Applications
+7814;CM System;1;0;0;Not Yet Defined
+7815;Syclo;1;0;0;Vendors
+7818;EFTPOS;1;0;0;Miscellaneous
+7823;Nmap;1;0;0;System Software
+7824;Tripwire;1;0;0;Vendors
+7826;Oracle iRecruitment;1;1;0;Business Applications
+7830;TSYS;1;0;0;Vendors
+7835;FPGA;1;1;0;Not Yet Defined
+7836;OPNET;0;0;0;Systems Management
+7838;VSAM;1;0;0;Miscellaneous
+7842;Anite;1;0;0;Vendors
+7843;SAX;1;0;0;Libraries, Frameworks & Software Standards
+7845;MBCS;1;0;0;Qualifications
+7847;TIBCO iProcess;1;1;0;Business Applications
+7849;arcHouse;1;0;0;Business Applications
+7850;Axapta;1;1;0;Business Applications
+7852;SGML;1;0;0;Not Yet Defined
+7854;ATG Dynamo;1;0;0;Application Platforms
+7855;DECT;1;0;0;Communications & Networking
+7862;QARun;1;0;0;Development Applications
+7864;KANA;1;0;0;Vendors
+7865;JBuilder;1;1;0;Development Applications
+7872;TYPO3;1;0;0;Application Platforms
+7873;BREW;1;0;0;Libraries, Frameworks & Software Standards
+7879;CSLA.NET;1;1;0;Not Yet Defined
+7881;Trend Micro;1;0;0;Vendors
+7883;DICOM;1;0;0;Quality Assurance & Compliance
+7885;VisionPLUS;1;0;0;Business Applications
+7887;NPfIT;1;0;0;Not Yet Defined
+7890;Zen Cart;1;1;0;Business Applications
+7892;PowerConvert;1;0;0;Not Yet Defined
+7893;EDIFACT;1;0;0;Libraries, Frameworks & Software Standards
+7895;Tieto;1;0;0;Vendors
+7898;C-shell;1;0;0;Programming Languages
+7901;Fusebox;1;0;0;Libraries, Frameworks & Software Standards
+7904;GoldMine;1;0;0;Business Applications
+7905;MiFID;1;0;0;Quality Assurance & Compliance
+7906;HttpUnit;1;0;0;Development Applications
+7909;CppUnit;1;0;0;Development Applications
+7913;ACTC;1;0;0;Qualifications
+7916;Apache Hive;1;1;0;Database & Business Intelligence
+7919;Minerva;1;0;0;Business Applications
+7924;VAX;1;1;0;Miscellaneous
+7925;EDMS;1;0;0;Database & Business Intelligence
+7927;ComponentArt;1;0;0;Not Yet Defined
+7929;IAG;1;0;0;System Software
+7930;Razor;1;1;0;Not Yet Defined
+7931;Xapian;1;1;0;Not Yet Defined
+7934;GroupWise;1;0;0;Application Platforms
+7935;NDS;1;0;0;System Software
+7936;Mediasurface;1;0;0;Not Yet Defined
+7937;Escenic;1;0;0;Application Platforms
+7943;OpenRasta;1;1;0;Libraries, Frameworks & Software Standards
+7944;Versant;1;0;0;Not Yet Defined
+7946;JAXP;1;0;0;Not Yet Defined
+7947;OpenID;1;1;0;Libraries, Frameworks & Software Standards
+7948;Fiddler;1;0;0;Development Applications
+7949;WebSockets;1;0;0;Libraries, Frameworks & Software Standards
+7954;WDF;1;0;0;Libraries, Frameworks & Software Standards
+7956;Microgen;1;0;0;Not Yet Defined
+7960;Autodesk;1;1;0;Vendors
+7962;Yii;1;1;0;Libraries, Frameworks & Software Standards
+7964;Decalog;1;0;0;Business Applications
+7968;MagicDraw;1;0;0;Not Yet Defined
+7971;MMIC;1;0;0;Not Yet Defined
+7972;Planning Poker;1;1;0;Processes & Methodologies
+7973;Sencha;1;1;0;Vendors
+7975;smartFOCUS;1;0;0;Vendors
+7977;UDDI;1;0;0;Libraries, Frameworks & Software Standards
+7983;Brainware;1;0;0;Not Yet Defined
+7984;ANTLR;1;0;0;Development Applications
+7986;NASTRAN;1;0;0;Applications
+7987;JDA;1;1;0;Vendors
+7989;HSQLDB;1;0;0;Database & Business Intelligence
+7992;X-Windows;1;1;0;Libraries, Frameworks & Software Standards
+7994;MIIS;1;0;0;Systems Management
+7998;ANSYS;1;0;0;Vendors
+8000;Sonic ESB;1;0;0;Application Platforms
+8003;XHR;1;1;0;Not Yet Defined
+8006;Embedded C/C++;1;1;0;Programming Languages
+8008;Xerces;1;1;0;Not Yet Defined
+8016;WinRT;1;1;0;Not Yet Defined
+8017;BGP-4;1;0;0;Communications & Networking
+8018;OpenVMS;1;1;0;Operating Systems
+8020;RF;1;0;0;Not Yet Defined
+8026;JFace;1;0;0;Libraries, Frameworks & Software Standards
+8028;Trapeze;1;0;0;Vendors
+8031;PureDisk;1;0;0;Systems Management
+8036;Model-Glue;1;0;0;Not Yet Defined
+8039;Doxygen;1;1;0;Development Applications
+8043;OSS;1;1;0;Not Yet Defined
+8045;FMECA;1;0;0;Processes & Methodologies
+8050;SIGTRAN;1;0;0;Communications & Networking
+8053;EccoWare;1;0;0;Not Yet Defined
+8054;CQG;1;0;0;Vendors
+8055;Formula;1;1;0;Not Yet Defined
+8057;MGW;1;0;0;Communications & Networking
+8059;NATURAL;1;1;0;Programming Languages
+8061;Syncfusion;1;0;0;Vendors
+8063;Plone;1;0;0;Application Platforms
+8072;Papervision3D;1;0;0;Not Yet Defined
+8073;PORTIA;1;0;0;Business Applications
+8076;JavaFX;1;0;4971;Libraries, Frameworks & Software Standards
+8082;Maxymiser;1;0;0;Vendors
+8087;Progress Apama;1;1;0;Business Applications
+8089;AnthillPro;1;0;0;Not Yet Defined
+8090;HIPAA;1;0;0;Quality Assurance & Compliance
+8091;Infovista;1;0;0;Vendors
+8092;Oracle SCM;1;1;0;Business Applications
+8099;Brainbench;1;0;0;Qualifications
+8101;WebKit;1;0;0;Libraries, Frameworks & Software Standards
+8102;Dovecot;1;0;0;System Software
+8108;Ceridian;1;0;0;Vendors
+8112;Essbase;1;1;0;Database & Business Intelligence
+8117;RightScale;1;0;0;Not Yet Defined
+8118;CRISC;1;0;0;Qualifications
+8119;FreeHand;1;0;0;Applications
+8121;KXEN;1;0;0;Not Yet Defined
+8126;Aprimo;1;0;0;Vendors
+8128;Mashup;1;0;0;Miscellaneous
+8130;Neural Network;1;1;0;Miscellaneous
+8131;YUM;1;1;0;Systems Management
+8135;IPFX;1;0;0;Vendors
+8137;CINEMA 4D;1;0;0;Applications
+8139;Draytek;1;0;0;Vendors
+8140;OpenSceneGraph;1;1;0;Not Yet Defined
+8144;GIMP;1;1;0;Applications
+8156;ProxySG;1;0;0;System Software
+8158;Build Forge;1;1;0;Development Applications
+8159;ActiveReports;1;0;0;Database & Business Intelligence
+8161;GLP;1;0;0;Quality Assurance & Compliance
+8162;DSLAM;1;0;0;Not Yet Defined
+8168;Metrica;1;0;0;Not Yet Defined
+8170;HiPortfolio;1;0;0;Business Applications
+8172;GNVQ;1;0;0;Qualifications
+8173;BT 21CN;1;0;0;Not Yet Defined
+8174;CaliberRM;1;0;0;Development Applications
+8182;SAP CS;1;1;0;Business Applications
+8183;SONET;1;0;0;Communications & Networking
+8188;QML;1;0;0;Libraries, Frameworks & Software Standards
+8198;uClinux;1;1;0;Operating Systems
+8200;Xsan;1;1;0;System Software
+8206;NMock;1;0;0;Development Applications
+8207;LogiXML;1;0;0;Not Yet Defined
+8210;LPIC;1;0;0;Qualifications
+8212;SAP EWM;1;1;0;Business Applications
+8220;Apache OFBiz;1;1;0;Not Yet Defined
+8221;pSOS;1;0;0;Operating Systems
+8225;Hazard Analysis;1;0;0;Processes & Methodologies
+8226;SystemC;1;0;0;Not Yet Defined
+8229;Pegasystems;1;0;0;Not Yet Defined
+8237;Embarcadero;1;0;0;Vendors
+8248;PEAR;1;0;0;Development Applications
+8250;Gentoo;1;1;0;Operating Systems
+8251;MD110;1;0;0;Communications & Networking
+8253;RNC;1;0;0;Communications & Networking
+8266;SCTP;1;0;0;Communications & Networking
+8273;Typemock;1;0;0;Vendors
+8274;T-Plan;1;0;0;Vendors
+8275;Apache Continuum;1;1;0;Development Applications
+8283;SAP FS;1;1;0;Business Applications
+8284;eCATT;1;0;0;Not Yet Defined
+8293;PowerExchange;1;1;0;Application Platforms
+8296;Spiceworks;1;0;0;Vendors
+8297;WhereScape RED;1;0;0;Database & Business Intelligence
+8301;Maconomy;1;0;0;Vendors
+8302;TopLink;1;0;0;Libraries, Frameworks & Software Standards
+8308;Domino;1;0;6334;Application Platforms
+8310;ZaiNet;1;1;0;Business Applications
+8314;XMLBeans;1;1;0;Libraries, Frameworks & Software Standards
+8315;SAP Workflow;1;1;0;Business Applications
+8317;JTS;1;0;0;Libraries, Frameworks & Software Standards
+8319;QualityStage;1;0;0;Database & Business Intelligence
+8320;jBASE;1;0;0;Vendors
+8321;Tesseract;1;0;0;Business Applications
+8322;OVSD;1;0;0;Systems Management
+8324;RANAP;1;1;0;Communications & Networking
+8327;Oracle Streams;1;1;0;Libraries, Frameworks & Software Standards
+8329;OpenWorks;1;1;0;Business Applications
+8331;Pegasus Opera;1;0;0;Business Applications
+8333;Zimbra;1;1;0;Application Platforms
+8334;MAPI;1;0;0;Libraries, Frameworks & Software Standards
+8335;GCP;1;0;0;Quality Assurance & Compliance
+8336;NetIQ;1;0;0;Vendors
+8340;RHCA;1;1;0;Qualifications
+8342;DCSE;1;0;0;Qualifications
+8343;WAMP;1;0;0;Libraries, Frameworks & Software Standards
+8344;Opsware;1;1;0;Not Yet Defined
+8345;HP Operations Orchestration;1;0;0;Systems Management
+8354;HiPerformance;1;0;0;Business Applications
+8355;SAP SM;1;1;0;Business Applications
+8356;Singl.eView;1;0;0;Not Yet Defined
+8357;StarTeam;1;0;0;Development Applications
+8358;Proofpoint;1;0;0;Vendors
+8361;PgMP;1;1;0;Qualifications
+8365;DbUnit;1;0;0;Development Applications
+8366;Sword FircoSoft;1;0;0;Not Yet Defined
+8367;BeanShell;1;0;0;Programming Languages
+8369;Apache FOP;1;1;0;Libraries, Frameworks & Software Standards
+8371;Zope;1;1;0;Application Platforms
+8373;SAP Authorisation;1;1;0;Business Applications
+8377;SQR;1;0;0;Programming Languages
+8378;Tivoli Configuration Manager;1;1;0;Systems Management
+8379;Paint Shop Pro;1;1;0;Applications
+8380;CWNA;1;0;0;Qualifications
+8390;Snowflake Schema;1;0;0;Database & Business Intelligence
+8393;CAPM;1;0;0;Qualifications
+8402;Morello;1;0;0;Not Yet Defined
+8403;Oracle BRM;1;1;0;Business Applications
+8404;NVQ Level 4;1;0;0;Not Yet Defined
+8407;CDISC;1;0;0;Not Yet Defined
+8408;JRuby;1;1;0;Libraries, Frameworks & Software Standards
+8412;SAP PSCD;1;1;0;Business Applications
+8415;DOCSIS;1;0;0;Communications & Networking
+8416;Laserform;1;0;0;Not Yet Defined
+8417;2.5G;1;1;0;Communications & Networking
+8420;wxWidgets;1;1;0;Libraries, Frameworks & Software Standards
+8421;Vizioncore;1;0;0;Not Yet Defined
+8432;OpenSIPS;1;1;0;System Software
+8438;Cerner;1;0;0;Vendors
+8440;Tektronix;1;0;0;Vendors
+8445;Webroot;1;0;0;Vendors
+8447;SEEBURGER;1;0;0;Vendors
+8451;Unica Affinium;1;0;0;Not Yet Defined
+8454;MIMO;1;0;0;Not Yet Defined
+8455;Tradeweb;1;0;0;Vendors
+8456;Epicor Vantage;1;0;0;Business Applications
+8458;X.500;1;1;0;Communications & Networking
+8459;Tru64;1;0;0;Operating Systems
+8460;EMC TimeFinder;1;1;0;Systems Management
+8470;PowerHA;1;0;0;System Software
+8471;comScore;1;0;0;Vendors
+8479;XMetaL;1;1;0;Applications
+8481;CHAP;1;0;0;Communications & Networking
+8483;HP Peregrine;1;1;0;Systems Management
+8484;Empirix;1;0;0;Vendors
+8487;Spring Roo;1;0;5020;Libraries, Frameworks & Software Standards
+8490;LynxOS;1;1;0;Operating Systems
+8493;SCSA;1;0;0;Qualifications
+8494;Progress Actional;1;1;0;Systems Management
+8495;Shibboleth;1;0;0;System Software
+8496;ZBrush;1;1;0;Applications
+8497;Mudbox;1;0;0;Applications
+8499;Investran;1;0;0;Not Yet Defined
+8506;TIBCO Hawk;1;1;0;Systems Management
+8507;Captiva;1;0;0;Application Platforms
+8508;Natural/Adabas;1;0;8059;Programming Languages
+8514;Oracle ETL;1;1;0;Database & Business Intelligence
+8515;SQL CLR;1;1;0;Database & Business Intelligence
+8517;Modernizr;1;0;0;Libraries, Frameworks & Software Standards
+8525;OSSTMM;1;0;0;Not Yet Defined
+8526;AssetCenter;1;0;0;Not Yet Defined
+8530;SyncML;1;0;0;Libraries, Frameworks & Software Standards
+8531;X.400;1;1;0;Communications & Networking
+8532;RSVP;1;1;0;Communications & Networking
+8534;EMB Igloo;1;0;0;Not Yet Defined
+8538;Optimost;1;0;0;Business Applications
+8539;OpenSolaris;1;1;0;Operating Systems
+8540;Heroku;1;1;0;Cloud Services
+8544;Gentran;1;0;0;Application Platforms
+8549;Trixbox;1;0;0;Not Yet Defined
+8550;FalconStor;1;0;0;Vendors
+8551;Apache CXF;1;1;0;Libraries, Frameworks & Software Standards
+8552;Flex Builder;1;1;0;Development Applications
+8555;SNA;1;0;0;Communications & Networking
+8556;BancTec;1;0;0;Not Yet Defined
+8564;SQLAlchemy;1;1;0;Libraries, Frameworks & Software Standards
+8568;RIFE;1;0;0;Not Yet Defined
+8569;SGI;1;0;0;Not Yet Defined
+8570;Kalido;1;0;0;Vendors
+8574;FBML;1;0;0;Not Yet Defined
+8578;Changepoint;1;0;0;Business Applications
+8581;NonStop SQL;1;0;0;Database & Business Intelligence
+8582;S/MIME;1;0;0;Communications & Networking
+8585;iPlanet;1;0;0;Application Platforms
+8587;Podcast;0;0;0;Miscellaneous
+8590;Plesk;1;1;0;Systems Management
+8599;PL/1;1;1;0;Programming Languages
+8601;NBAP;1;0;0;Not Yet Defined
+8602;Veritas Storage Foundation;1;1;0;Systems Management
+8610;Kronos;1;0;0;Vendors
+8621;OSCP;1;0;0;Qualifications
+8624;Dialogic;1;0;0;Vendors
+8625;CSQA;1;0;0;Qualifications
+8626;BMC Performance Manager;1;1;0;Systems Management
+8631;OpenAL;1;1;0;Not Yet Defined
+8633;SAP MII;1;1;0;Business Applications
+8637;yacc;1;1;0;Libraries, Frameworks & Software Standards
+8641;SHDSL;1;0;0;Communications & Networking
+8644;ICL;1;0;0;Vendors
+8645;Intalio;1;0;0;Not Yet Defined
+8646;MyEclipse;1;0;0;Development Applications
+8649;JNI;1;1;0;Libraries, Frameworks & Software Standards
+8653;amfPHP;1;1;0;Development Applications
+8655;Kamailio;1;0;0;System Software
+8661;OpenVG;1;1;0;Not Yet Defined
+8662;Synopsys;1;0;0;Vendors
+8666;NHibernate;1;1;0;Libraries, Frameworks & Software Standards
+8668;MathWorks;1;0;0;Vendors
+8677;OSSEC;1;0;0;Systems Management
+8679;tcsh;1;0;0;Programming Languages
+8682;HSUPA;1;0;0;Communications & Networking
+8696;Savvion;1;0;0;Not Yet Defined
+8711;DO-254;1;0;0;Not Yet Defined
+8713;ProjectWise;1;0;0;Not Yet Defined
+8714;CAPI;1;0;0;Not Yet Defined
+8715;PROIV;1;0;0;Development Applications
+8719;OpenCms;1;1;0;Not Yet Defined
+8720;WBIMB;1;0;0;Not Yet Defined
+8729;ISAPI;1;0;0;Not Yet Defined
+8742;MXML;1;0;0;Not Yet Defined
+8747;FreeRADIUS;1;0;0;System Software
+8767;TeleForm;1;0;0;Not Yet Defined
+8768;LiquidOffice;1;0;0;Not Yet Defined
+8772;ISSAP;1;0;0;Qualifications
+8774;Symposium;1;0;0;Communications & Networking
+8776;FDDI;1;0;0;Not Yet Defined
+8778;i5/OS;1;0;0;Operating Systems
+8782;Laserfiche;1;0;0;Vendors
+8783;IDEF;1;0;0;Processes & Methodologies
+8784;SunGard Stream Clearvision;1;1;0;Business Applications
+8788;SilverStripe;1;0;0;Application Platforms
+8790;Demantra;1;0;0;Business Applications
+8797;MetaTagger;1;0;0;Not Yet Defined
+8799;Intershop;1;0;0;Vendors
+8801;Clementine;1;0;0;Database & Business Intelligence
+8802;UPnP;1;0;0;Communications & Networking
+8808;Vectorworks;1;0;0;Not Yet Defined
+8821;Oracle UPK;1;1;0;Application Platforms
+8823;SYSPRO;1;0;0;Vendors
+8825;Valgrind;1;1;0;Development Applications
+8828;Clarity;1;1;0;Not Yet Defined
+8829;Revit;1;0;0;Applications
+8830;CCXML;1;0;0;Libraries, Frameworks & Software Standards
+8832;SAS BI;1;1;0;Business Applications
+8834;WebInspect;1;0;0;Systems Management
+8835;AppScan;1;0;0;Not Yet Defined
+8837;Pylons;1;1;0;Libraries, Frameworks & Software Standards
+8841;Prolog;1;1;0;Programming Languages
+8842;Novadigm;1;0;0;Not Yet Defined
+8843;WML;1;1;0;Libraries, Frameworks & Software Standards
+8844;Maypole;1;0;0;Not Yet Defined
+8845;Mach-II;1;0;0;Not Yet Defined
+8850;Elements/Pro;1;0;0;Not Yet Defined
+8855;AppleScript;1;1;0;Programming Languages
+8856;ImageReady;1;0;0;Not Yet Defined
+8858;RepliStor;1;0;0;Not Yet Defined
+8862;OMEGAMON;1;0;0;Systems Management
+8864;Brady;1;0;0;Vendors
+8873;OpenTV;1;1;0;Not Yet Defined
+8874;MFGPRO;1;1;0;Business Applications
+8875;Cocoon;1;0;0;Libraries, Frameworks & Software Standards
+8877;ObjectStore;1;0;0;Not Yet Defined
+8885;Sencha Touch;1;1;0;Libraries, Frameworks & Software Standards
+8887;Intentia;1;0;0;Not Yet Defined
+8888;HSDPA;1;0;0;Communications & Networking
+8889;InterBase;1;0;0;Database & Business Intelligence
+8891;JProbe;1;1;0;Not Yet Defined
+8892;SAP ESA;1;1;0;Processes & Methodologies
+8900;OpenROAD;1;1;0;Application Platforms
+8901;Intec;1;0;0;Not Yet Defined
+8902;cXML;1;0;0;Not Yet Defined
+8903;Scalix;1;0;0;Vendors
+8904;Sybase IQ;1;1;0;Database & Business Intelligence
+8906;Series 60;1;0;0;Not Yet Defined
+8908;PTC;1;0;0;Vendors
+8912;IMS/DB;1;0;0;Not Yet Defined
+8916;ISPF;1;0;0;Libraries, Frameworks & Software Standards
+8918;FormScape;1;0;0;Application Platforms
+8919;Arduino;1;1;0;Miscellaneous
+8920;Merb;1;0;0;Not Yet Defined
+8921;Xserve;1;1;0;Not Yet Defined
+8922;RubyGems;1;0;5146;Libraries, Frameworks & Software Standards
+8923;JSystem;1;0;0;Not Yet Defined
+8924;Val IT;1;0;0;Not Yet Defined
+8929;Embedded Java;1;1;0;Programming Languages
+8932;Kerio;1;0;0;Vendors
+8933;Kerio MailServer;1;0;0;System Software
+8934;Leostream;1;0;0;Not Yet Defined
+8935;Neoview;1;0;0;Database & Business Intelligence
+8938;COOL:Gen;1;0;0;Not Yet Defined
+8940;BMC Marimba;1;1;0;Not Yet Defined
+8941;SAP BC;1;1;0;Business Applications
+8945;Maximo;1;1;0;Business Applications
+8947;NetCracker;1;0;0;Vendors
+8948;WS-I;1;0;0;Not Yet Defined
+8949;e-GIF;1;0;0;Processes & Methodologies
+8951;Slackware;1;0;0;Not Yet Defined
+8952;MAXScript;1;0;0;Programming Languages
+8953;Credient;1;0;0;Not Yet Defined
+8954;Radianz;1;0;0;Not Yet Defined
+8964;CherryPy;1;0;0;Libraries, Frameworks & Software Standards
+8969;WebFOCUS;1;0;0;Database & Business Intelligence
+8970;ISUP;1;0;0;Communications & Networking
+8972;DELMIA;1;0;0;Not Yet Defined
+8974;iSOFT;1;0;0;Not Yet Defined
+8975;ThreadX;1;0;0;Operating Systems
+8976;DFSS;1;0;0;Processes & Methodologies
+8978;XDE;1;1;0;Development Applications
+8988;Quickr;1;1;0;Application Platforms
+8990;QuickFIX;1;0;0;Libraries, Frameworks & Software Standards
+8996;DO-160;1;0;0;Not Yet Defined
+8997;VisualSVN;1;1;0;Development Applications
+9000;Cobertura;1;0;0;Not Yet Defined
+9003;CIW;1;0;0;Not Yet Defined
+9005;CNE;1;0;0;Qualifications
+9006;InterDev;1;0;0;Not Yet Defined
+9008;SumTotal;1;0;0;Vendors
+9009;WebWork;1;0;0;Libraries, Frameworks & Software Standards
+9010;Stata;1;0;0;Applications
+9017;StyleCop;1;0;0;Development Applications
+9018;Jtest;1;0;0;Not Yet Defined
+9019;Tivoli Directory Server;1;1;0;System Software
+9021;SyteLine;1;0;0;Business Applications
+9027;SAP EDI;1;1;0;Business Applications
+9034;Blackboard;1;0;0;Vendors
+9035;Sun Identity Manager;1;0;5335;Systems Management
+9037;SCNA;1;1;0;Qualifications
+9038;Finjan;1;0;0;Vendors
+9039;CICS;1;0;0;Application Platforms
+9040;Exstream;1;1;0;Business Applications
+9041;Exstream Dialogue;1;0;9040;Not Yet Defined
+9042;MapBasic;1;0;0;Programming Languages
+9045;CRAMM;1;0;0;Processes & Methodologies
+9046;CA Endevor;1;0;5731;Systems Management
+9050;DCL;1;0;0;Programming Languages
+9063;dBASE;1;1;0;Database & Business Intelligence
+9066;TIBCO InConcert;1;1;0;Not Yet Defined
+9067;IONA;1;0;0;Not Yet Defined
+9068;ReportNet;1;0;0;Not Yet Defined
+9070;Softphone;1;0;0;Communications & Networking
+9071;Stateflow;1;0;0;Applications
+9072;PPTP;1;0;0;Communications & Networking
+9073;OCX;1;0;0;Libraries, Frameworks & Software Standards
+9074;X.21;1;1;0;Communications & Networking
+9075;Visual J++;1;1;0;Development Applications
+9076;SNIA Certification;1;0;0;Not Yet Defined
+9082;AQtime;1;0;0;Development Applications
+9085;Smalltalk;1;0;0;Programming Languages
+9086;OS/400;1;1;0;Operating Systems
+9090;DTCC;1;0;0;Miscellaneous
+9096;Servitor;1;0;0;Business Applications
+9098;TECHNIDATA;1;0;0;Not Yet Defined
+9099;MEDITECH;1;0;0;Not Yet Defined
+9100;Apache Cayenne;1;1;0;Libraries, Frameworks & Software Standards
+9101;Epicor iScala;1;0;0;Business Applications
+9109;Taglibs;1;0;0;Libraries, Frameworks & Software Standards
+9111;SAP Travel Management;1;1;0;Business Applications
+9112;WMQI;1;1;0;Not Yet Defined
+9113;SCSE;1;0;0;Qualifications
+9114;NGOSS;1;0;0;Miscellaneous
+9115;Axway;1;0;0;Vendors
+9117;Canoo;1;1;0;Vendors
+9118;CSSLP;1;1;0;Qualifications
+9119;ALGOL;1;1;0;Not Yet Defined
+9120;IronRuby;1;1;0;Not Yet Defined
+9121;Rolfe and Nolan;1;0;0;Business Applications
+9126;SAP ECC;1;1;0;Business Applications
+9132;SAP BSP;1;1;0;Libraries, Frameworks & Software Standards
+9137;Iron Mountain;1;0;0;Not Yet Defined
+9138;Open Graph;1;1;0;Libraries, Frameworks & Software Standards
+9139;FFmpeg;1;0;0;Libraries, Frameworks & Software Standards
+9140;netForensics;1;0;0;Not Yet Defined
+9150;CPIM;1;0;0;Qualifications
+9151;NorthgateArinso;1;0;0;Not Yet Defined
+9163;SMIL;1;0;0;Not Yet Defined
+9164;IXOS;1;0;0;Not Yet Defined
+9165;SAP SEM;1;1;0;Business Applications
+9166;Oracle Collaboration Suite;1;1;0;Application Platforms
+9167;SpamAssassin;1;1;0;System Software
+9179;Meridio;1;0;0;Vendors
+9180;SQLBase;1;1;0;Database & Business Intelligence
+9181;Papyrus;1;0;0;Not Yet Defined
+9182;StreamWeaver;1;0;0;Not Yet Defined
+9187;EFQM;1;0;0;Quality Assurance & Compliance
+9188;TDMA;1;0;0;Communications & Networking
+9189;Fiorano;1;1;0;Vendors
+9190;openSUSE;1;1;0;Operating Systems
+9193;MonoDevelop;1;0;0;Not Yet Defined
+9196;DbVisualizer;1;0;0;Database & Business Intelligence
+9197;Azul;1;0;0;Not Yet Defined
+9200;Crystal Dashboard Design;1;1;0;Development Applications
+9204;MHEG;1;0;0;Miscellaneous
+9205;Oracle Designer;1;1;0;Database & Business Intelligence
+9208;WSE;1;0;0;Libraries, Frameworks & Software Standards
+9211;NLBS;1;0;0;Not Yet Defined
+9213;Shale;1;0;0;Not Yet Defined
+9214;Metasploit;1;0;0;Development Applications
+9215;Inkscape;1;0;0;Applications
+9216;MarketAxess;1;0;0;Vendors
+9217;Plumtree;0;0;0;Not Yet Defined
+9225;KANA IQ;1;0;0;Not Yet Defined
+9226;LiteSpeed;1;0;0;System Software
+9228;Kondor+;1;0;0;Business Applications
+9234;Palm OS;1;1;0;Operating Systems
+9235;OS/2;1;1;0;Operating Systems
+9236;Sagent;1;0;0;Vendors
+9237;MAPICS;1;0;0;Not Yet Defined
+9239;McKesson;1;0;0;Not Yet Defined
+9241;IMAC Engineer;1;0;0;Not Yet Defined
+9244;Sophis RISQUE;1;0;0;Business Applications
+9247;Royalblue;1;0;0;Not Yet Defined
+9248;IRCA;1;0;0;Qualifications
+9249;CFML;1;0;0;Programming Languages
+9250;Uniface;1;0;0;Programming Languages
+9253;Infinys;1;0;0;Not Yet Defined
+9255;Coverity;1;0;0;Vendors
+9267;SAP xMII;1;1;0;Not Yet Defined
+9268;Draughtsman;1;0;0;Not Yet Defined
+9269;PegaRULES;1;0;0;Application Platforms
+9273;ProtoShare;1;0;0;Development Applications
+9274;bada;1;0;0;Operating Systems
+9275;K2 blackpoint;1;0;0;Not Yet Defined
+9281;OnBase;1;0;0;Application Platforms
+9282;ArcSDE;1;0;0;Not Yet Defined
+9285;MSI Packager;1;0;0;Not Yet Defined
+9287;OVIS;1;0;0;Not Yet Defined
+9292;Caplin;1;0;0;Vendors
+9294;LLPG;1;0;0;Not Yet Defined
+9295;NLPG;1;0;0;Miscellaneous
+9297;Aquila;1;0;0;Not Yet Defined
+9298;Nortel Periphonics;1;1;0;Not Yet Defined
+9299;SPML;1;0;0;Libraries, Frameworks & Software Standards
+9300;XMLUnit;1;1;0;Development Applications
+9301;HOLAP;1;0;0;Not Yet Defined
+9305;Watij;1;1;0;Development Applications
+9310;Perimeter Security;1;0;0;Not Yet Defined
+9312;Expression Web;1;0;0;Development Applications
+9314;CORE IMPACT;1;0;0;Systems Management
+9319;Sahi;1;0;0;Development Applications
+9323;qooxdoo;1;1;0;Not Yet Defined
+9325;Oracle Statspack;1;1;0;Systems Management
+9326;IT2;1;0;0;Vendors
+9328;Altova;1;0;9386;Vendors
+9331;Windows Storage Server;1;1;0;Systems Management
+9332;MyFaces;1;0;0;Not Yet Defined
+9343;HP Storage;1;1;0;Systems Management
+9350;Actel;1;0;0;Vendors
+9351;Lattice Semiconductor;1;0;0;Not Yet Defined
+9352;Solid Edge;1;0;0;Applications
+9354;Joomla!;1;0;5717;Application Platforms
+9355;AngularJS;1;1;0;Libraries, Frameworks & Software Standards
+9356;Angular;1;0;9355;Libraries, Frameworks & Software Standards
+9357;KnockoutJS;1;1;0;Libraries, Frameworks & Software Standards
+9358;Knockout;1;0;9357;Libraries, Frameworks & Software Standards
+9359;EmberJS;1;1;0;Libraries, Frameworks & Software Standards
+9360;Google Web Toolkit;1;0;5648;Libraries, Frameworks & Software Standards
+9361;3D Studio Max;1;0;7455;Applications
+9362;Adobe Flash;1;0;5117;Applications
+9363;JDE;1;0;5891;Vendors
+9364;Oracle DWH;1;0;7652;Database & Business Intelligence
+9365;AS/400;1;0;5725;Miscellaneous
+9366;Adobe Acrobat;1;1;0;Applications
+9367;VisualC++;1;1;0;Programming Languages
+9368;Windows 8;1;1;0;Operating Systems
+9369;JEE;1;1;0;Libraries, Frameworks & Software Standards
+9370;BO;1;0;5424;Database & Business Intelligence
+9371;BackboneJS;1;1;0;Libraries, Frameworks & Software Standards
+9372;Backbone;1;0;9371;Libraries, Frameworks & Software Standards
+9373;Angluar.js;1;0;9355;Libraries, Frameworks & Software Standards
+9374;Knockout.js;1;0;9357;Libraries, Frameworks & Software Standards
+9375;Grid;1;0;5784;Miscellaneous
+9376;Guice;1;0;6979;Libraries, Frameworks & Software Standards
+9377;HPUX;1;0;5527;Operating Systems
+9378;HP Unix;1;0;5527;Operating Systems
+9379;MyBatis;1;0;6822;Libraries, Frameworks & Software Standards
+9380;MyBatis.net;1;0;6822;Libraries, Frameworks & Software Standards
+9381;Oracle Business Intelligence Enterprise Edition;1;0;7464;Database & Business Intelligence
+9382;Peregrine;1;0;8483;Vendors
+9383;MacOS;1;0;6207;Operating Systems
+9384;TFS;1;1;5213;Development Applications
+9385;BIRT;1;1;0;Not Yet Defined
+9386;XML Spy;1;1;0;Not Yet Defined
+9387;Oracle Data Guard;1;1;0;Not Yet Defined
+9388;Bash shell script;1;1;5297;Programming Languages
+9389;OCM;1;1;0;Not Yet Defined
+9390;Cassandra;1;0;6233;Database & Business Intelligence
+9391;Scrum;1;1;0;Processes & Methodologies
+9392;Waterfall;1;1;0;Processes & Methodologies
+9393;RhinoMocks;1;0;5273;Libraries, Frameworks & Software Standards
+9394;HTML 5;1;0;5099;Libraries, Frameworks & Software Standards
+9395;Dart;1;1;0;Not Yet Defined
+9396;MariaDB;1;1;0;Database & Business Intelligence
+9397;Mustache.JS;1;0;9397;Libraries, Frameworks & Software Standards
+9398;MustacheJS;1;1;0;Libraries, Frameworks & Software Standards
+9399;Mustache;1;0;9397;Libraries, Frameworks & Software Standards
+9401;JavaServer Faces;1;0;5583;Libraries, Frameworks & Software Standards
+9402;JavaServerFaces;1;0;5583;Libraries, Frameworks & Software Standards
+9403;RequireJS;1;1;0;Libraries, Frameworks & Software Standards
+9404;Require.JS;1;0;9403;Libraries, Frameworks & Software Standards
+9405;Resource Reservation Protocol;1;0;8532;Communications & Networking
+9406;PhoneGap;1;1;0;Libraries, Frameworks & Software Standards
+9407;NumPy;1;1;0;Libraries, Frameworks & Software Standards
+9408;SciPy;1;1;0;Libraries, Frameworks & Software Standards
+9409;Microsoft SQL Server;1;0;4969;Database & Business Intelligence
+9410;Oracle Database Server;1;1;0;Database & Business Intelligence
+9411;SVN;1;0;5060;Development Applications
+9412;Xamarin;1;1;0;Libraries, Frameworks & Software Standards
+9413;Microsoft Azure;1;1;0;Cloud Services
+9414;Zepto.JS;1;0;9415;Libraries, Frameworks & Software Standards
+9415;ZeptoJS;1;1;0;Libraries, Frameworks & Software Standards
+9416;Munin;1;1;0;Systems Management
+9417;Jenkins;1;1;0;Development Applications
+9418;JenkinsCI;1;0;9417;Development Applications
+9419;Bootstrap;1;1;0;Libraries, Frameworks & Software Standards
+9420;AWS Elastic Beanstalk;1;1;0;Development Applications
+9421;AWS ElastiCache;1;1;0;Cloud Services
+9422;Liquibase;1;1;0;Development Applications
+9423;Crucible;1;1;0;Development Applications
+9424;Fisheye;1;0;9423;Development Applications
+9425;Rietveld;1;1;0;Development Applications
+9426;RhodeCode;1;1;0;Development Applications
+9427;Review Board;1;1;0;Development Applications
+9428;ReviewBoard;1;0;9427;Development Applications
+9429;Atlassian Crucible;1;0;9423;Development Applications
+9430;Gerrit;1;1;0;Development Applications
+9431;Phabricator Differential ;1;1;0;Development Applications
+9432;Phabricator;1;1;0;Vendors
+9433;Flyway;1;1;0;Development Applications
+9434;Docker;1;1;0;System Software
+9435;LXC;1;1;0;System Software
+9436;LXD;1;1;0;System Software
+9437;LXCFS;1;1;0;System Software
+9438;CGManager;1;1;0;System Software
+9439;Ansible;1;1;0;Systems Management
+9440;Chef;1;1;0;Systems Management
+9441;ReactJS;1;1;0;Libraries, Frameworks & Software Standards
+9442;React.JS;1;0;9441;Libraries, Frameworks & Software Standards
+9443;React;1;0;9441;Libraries, Frameworks & Software Standards
+9444;PostScript;1;1;0;Programming Languages
+9445;ZFS;1;1;0;Systems Management
+9445;OpenZFS;1;0;9445;Systems Management
+9447;Bottle;1;1;0;Libraries, Frameworks & Software Standards
+9448;Mac OSX;1;0;5658;Operating Systems
+9449;Appium;1;1;0;Development Applications
+9450;Ranorex;1;1;0;Development Applications
+9451;SeeTest;1;1;0;Development Applications
+9452;Robotium;1;1;0;Development Applications
+9453;MonkeyRunner;1;1;0;Development Applications
+9454;Adabas;1;0;8059;Programming Languages
+9455;OSX;1;0;5658;Operating Systems
+9456;Swift;1;1;0;Programming Languages
