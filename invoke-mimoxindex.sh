@@ -14,6 +14,10 @@ export ALTA_DBUSER=""
 export ALTA_DBPASS=""
 export ALTA_DBNAME=""
 
+export GMAIL_PWD=""
+export GMAIL_USER=""
+export GMAIL_SMTP="smtp.gmail.com:587"
+
 python -u $SCRIPT_PATH $@
 
 

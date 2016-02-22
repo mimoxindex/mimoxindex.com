@@ -53,7 +53,7 @@ CACHE=os.environ.get('CACHE')
 CACHE_TIME=3600 #1h
 CACHE_USE=True
 
-TERM_EMAIL_RECPS=['tamas.tobi@gmail.com','mimoxindex@mimox.com']
+TERM_EMAIL_RECPS=['mimoxindex@gmail.com','mimoxindex@mimox.com']
 ##########################################
 
 def Mailer(subj,msg,sender,recp):

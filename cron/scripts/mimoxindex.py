@@ -9,6 +9,26 @@ import time
 import feedparser
 import re
 import cPickle as pickle
+import smtplib
+
+GMAIL_PWD=os.environ.get('GMAIL_PWD')
+GMAIL_USER=os.environ.get('GMAIL_USER')
+GMAIL_SMTP=os.environ.get('GMAIL_SMTP')
+EMAIL_RECPS=['mimoxindex@gmail.com','mimoxindex@mimox.com']
+
+def Mailer(subj,msg,sender,recp):
+	try:
+		message = """From: %s\nTo: %s\nSubject: %s\n\n%s\n""" % (sender, ", ".join(recp), subj, msg+"\n\n"+time.strftime('%H:%M:%S',time.localtime()))
+		server = smtplib.SMTP(GMAIL_SMTP)
+		server.ehlo()
+		server.starttls()
+		server.login(GMAIL_USER,GMAIL_PWD)
+		server.sendmail(sender, recp, message)
+		server.quit()
+		print 'Mailer: Mail sent for: ',str(recp)
+	except Exception, e:
+		print 'Mailer: Mail sending exception. Message:',str(msg),str(recp),str(e)
+		pass
 
 class MimoxIndex():
 	
@@ -550,9 +570,12 @@ class MimoxIndex():
 	def altaexport(self):
 		self.closeMysqlConn()
 		self.initMysqlConns()
+		self.initAltaMysqlConn()
+		
 		print "altaexport..."
 		if not self.alta_db:
 			print "No ALTADB connection. Exit."
+			Mailer('Alta DB connection problem','\nCant connect to Alta MySQL server!',"mimoxindex@gmail.com",TERM_EMAIL_RECPS)
 			return
 		## upload data
 		#SELECT TermName,TermRank,TermCnt,TermTrend,termid FROM `mimox_index` ORDER BY TermRank ASC
