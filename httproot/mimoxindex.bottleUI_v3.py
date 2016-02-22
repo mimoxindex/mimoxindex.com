@@ -886,4 +886,4 @@ if __name__=="__main__":
 		print "Already running:", str(e)
 		sys.exit(1)
 	if r:
-		run(server='bjoern', host=RUN_IP, port=RUN_PORT, debug=True, reloader=False, app=app)
+		run(server='cherrypy', host=RUN_IP, port=RUN_PORT, debug=True, reloader=False, app=app)
