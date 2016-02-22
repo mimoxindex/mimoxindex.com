@@ -763,6 +763,7 @@ def ajax_termsearch(term=""):
 def ajax_gethistory(searchdate=""):
 	searchdate=""
 	s = request.session
+	pickle_date={}
 	searchdate_dict = request.query.decode()
 	if 'searchdate' in searchdate_dict:
 		searchdate = searchdate_dict['searchdate']
@@ -771,7 +772,10 @@ def ajax_gethistory(searchdate=""):
 	qry="SELECT pickledump FROM trendhisory WHERE trenddate LIKE %s ORDER BY trenddate DESC  LIMIT 1"
 	c.execute(qry, (searchdate+'%'))
 	irows = c.fetchall()
-	pickle_date=pickle.loads(str(irows[0][0]))
+	if irows:
+		if len(irows):
+			if len(irows[0]):
+				pickle_date=pickle.loads(str(irows[0][0]))
 	closeconn(db,c)
 	return json.dumps(pickle_date)
 	
