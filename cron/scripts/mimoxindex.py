@@ -575,7 +575,7 @@ class MimoxIndex():
 		print "altaexport..."
 		if not self.alta_db:
 			print "No ALTADB connection. Exit."
-			Mailer('Alta DB connection problem','\nCant connect to Alta MySQL server!',"mimoxindex@gmail.com",TERM_EMAIL_RECPS)
+			Mailer('Alta DB connection problem','\nCant connect to Alta MySQL server!',"mimoxindex@gmail.com",EMAIL_RECPS)
 			return
 		## upload data
 		#SELECT TermName,TermRank,TermCnt,TermTrend,termid FROM `mimox_index` ORDER BY TermRank ASC
