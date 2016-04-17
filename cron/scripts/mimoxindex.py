@@ -153,7 +153,7 @@ class MimoxIndex():
 				try:
 					self.c.execute(qry)
 				except Exception,e:
-					print qry, str(e)
+					print "ERROR", qry, str(e)
 					pass
 			i+=1
 		print "Terms inserted/updated to terms table: ",str(i)
@@ -175,9 +175,9 @@ class MimoxIndex():
 			i=0
 			for k in d['entries']:
 				description=k['summary_detail']['value'].replace("'","").replace('"',"")
-				link=k['link']
+				link=k['link'].replace("'","").replace('"',"")
 				title=k['title'].replace("'","").replace('"',"")
-				author=k['author']
+				author=k['author'].replace("'","").replace('"',"")
 				pubdate=str(k['published'])
 				h=hashlib.new('sha1')
 				
@@ -189,11 +189,15 @@ class MimoxIndex():
 				#check existing link
 				if link and link != feedlink:
 					qry_check="SELECT id, link FROM `rss` WHERE link = '%s'" % (link)
-					self.c.execute(qry_check)
-					chrows = self.c.fetchall()
-					if len(chrows):
-						print "Link already exist in DB, skip: ",link,feedlink,str(chrows)
-						continue
+					try:
+						self.c.execute(qry_check)
+						chrows = self.c.fetchall()
+						if len(chrows):
+							print "Link already exist in DB, skip: ",link,feedlink,str(chrows)
+							continue
+					except Exception,e:
+						print "ERROR Exception during checking existing links from db:",str(e),str(qry_check)
+						pass
 				
 				#insert qry
 				qry="INSERT INTO `rss` (site, sitelink, title, link, pubdate, description, hash) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s') ON DUPLICATE KEY UPDATE site = '%s', sitelink='%s', title='%s', link='%s', description = '%s' " % (author, feedlink, title, link, pubdate, description, hsh, author, feedlink, title, link, description)
@@ -203,7 +207,7 @@ class MimoxIndex():
 					self.c.execute(qry)
 					i+=1
 				except Exception,e:
-					print str(e)
+					print "ERROR Exception: ",str(e)
 					print "Qry:", qry
 					pass
 				
