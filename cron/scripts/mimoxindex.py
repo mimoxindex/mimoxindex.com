@@ -76,13 +76,13 @@ class MimoxIndex():
 		elif self.trendcount == "cleanterms":
 			self.clean('terms')
 			return
-		elif self.trendcount == "altaexport":
-			self.altaexport()
-			return
+		#elif self.trendcount == "altaexport":
+		#	self.altaexport()
+		#	return
 		self.rssparser()
 		self.termcounter()
 		self.ranker()
-		self.altaexport()
+		#self.altaexport()
 		
 	def initMysqlConns(self):
 		try:
