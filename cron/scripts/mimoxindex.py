@@ -65,7 +65,7 @@ class MimoxIndex():
 		elif self.trendcount == "trendcount":
 			self.trendcounter()
 			self.trendcounter90()
-			self.altaexport()
+			#self.altaexport()
 			return
 		elif self.trendcount == "clean":
 			self.clean()
@@ -571,7 +571,8 @@ class MimoxIndex():
 			print e
 			pass
 		
-	def altaexport(self):
+	def altaexport(self)
+		return:
 		self.closeMysqlConn()
 		self.initMysqlConns()
 		self.initAltaMysqlConn()
