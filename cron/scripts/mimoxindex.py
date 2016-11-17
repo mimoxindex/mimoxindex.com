@@ -201,6 +201,7 @@ class MimoxIndex():
 				
 				#insert qry
 				qry="INSERT INTO `rss` (site, sitelink, title, link, pubdate, description, hash) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s') ON DUPLICATE KEY UPDATE site = '%s', sitelink='%s', title='%s', link='%s', description = '%s' " % (author, feedlink, title, link, pubdate, description, hsh, author, feedlink, title, link, description)
+				qry_growing="INSERT INTO `rss_growing` (site, sitelink, title, link, pubdate, description, hash) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s') ON DUPLICATE KEY UPDATE site = '%s', sitelink='%s', title='%s', link='%s', description = '%s' " % (author, feedlink, title, link, pubdate, description, hsh, author, feedlink, title, link, description)
 				
 				try:
 					#print qry
@@ -210,6 +211,14 @@ class MimoxIndex():
 					print "ERROR Exception: ",str(e)
 					print "Qry:", qry
 					pass
+
+				try:
+					self.c.execute(qry_growing)
+				except Exception,e:
+					print "ERROR Exception: ",str(e)
+					print "Qry:", qry_growing
+					pass
+
 				
 				#print qry
 			print "Entries: ",str(len(d['entries'])),", Inserted NEW: ",str(i)
