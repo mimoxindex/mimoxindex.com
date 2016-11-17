@@ -135,3 +135,28 @@ CREATE TABLE IF NOT EXISTS `trendhisory` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+CREATE TABLE `rss_growing` (
+  `id` int(11) NOT NULL,
+  `site` varchar(255) DEFAULT NULL,
+  `sitelink` varchar(255) DEFAULT NULL,
+  `title` text,
+  `link` text,
+  `pubdate` datetime DEFAULT NULL,
+  `description` text,
+  `hash` varchar(128) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `rss_growing`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `hash` (`hash`),
+  ADD KEY `site` (`site`),
+  ADD KEY `sitelink` (`sitelink`),
+  ADD KEY `pubdate` (`pubdate`);
+ALTER TABLE `rss_growing` ADD FULLTEXT KEY `link` (`link`);
+
+
+ALTER TABLE `rss_growing`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
