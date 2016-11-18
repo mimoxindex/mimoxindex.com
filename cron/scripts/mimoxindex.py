@@ -580,8 +580,8 @@ class MimoxIndex():
 			print e
 			pass
 		
-	def altaexport(self)
-		return:
+	def altaexport(self):
+		return
 		self.closeMysqlConn()
 		self.initMysqlConns()
 		self.initAltaMysqlConn()
