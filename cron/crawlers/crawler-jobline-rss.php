@@ -16,7 +16,7 @@ function getContent($link) {
 //	echo $html;
 //<section itemprop="skills"
 //	$descriptionfilter = "section[class=adv]/section[itemprop=skills]";
-	$descriptionfilter = "section[itemprop=skills]";
+	$descriptionfilter = "section[itemprop=PositionInfo]";
 	$out = trim(html_entity_decode($pageContent->find($descriptionfilter, 0)->plaintext, 1, "UTF-8"));
 	//echo "\n-----\n".$out."\n-----\n";
 	if (empty($out)){
@@ -36,10 +36,10 @@ echo setXMLHeader($siteToCrawl);
 function getLinks($page) {
 	global $siteToCrawl, $LIMIT, $CNT;
 
-	$mainPageJobPostIdentifier = "div[class=fl]";
-	$mainPageJobPostTitleIdentifier = "h3[itemprop=title],h2[itemprop=title],h1[itemprop=title]";
-	$mainPageJobPostLinkIdentifier = "h3[itemprop=title]/a,h2[itemprop=title]/a,h1[itemprop=title]/a";
-	$mainPageNextLinkIdentifier = "a[class=grid-pager]";
+	$mainPageJobPostIdentifier = "article[class=m-job_item]";
+	$mainPageJobPostTitleIdentifier = "h1[class=job-title]";
+	$mainPageJobPostLinkIdentifier = "span[href]";
+	$mainPageNextLinkIdentifier = "a[class=next]";
 	$descriptionfilter = "div[class=post-content]";
 	$pubdatefilter = "small[itemprop=datePosted]";
 
@@ -61,8 +61,10 @@ function getLinks($page) {
 		}
 		$CNT++;
 
+
 		$rssContentItem = "<item>\n";
 		$jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
+		
 		
 		//echo $jobPostTitle."\n";
 		
@@ -70,7 +72,11 @@ function getLinks($page) {
 			continue;
 		}
 		
+
+		/*
 		$pubdate = trim(str_replace(" ", "", str_replace(".","-",replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext))),"-");
+
+		die($jobPostTitle);		
 		
 		$jobPostPubDate_i=strtotime($pubdate);
 		
@@ -89,12 +95,19 @@ function getLinks($page) {
 			$jobPostPubDate = date("Y-m-d H:i:s", $jobPostPubDate_i);
 		}
 
+		*/
+		$jobPostPubDate = date("Y-m-d 00:00:01");
+
 		$rssContentItem .= "<title>". strip_tags($jobPostTitle) . "</title>\n";
 		// get the URL of the entry
 		$lnk=$jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
 		
+		
+
 		$jobPostLink = "https://" . $siteToCrawl . $lnk;
 		
+		
+
 		//echo $lnk."\n";
 		//get extra info
 		if (!empty($lnk)){
@@ -111,6 +124,7 @@ function getLinks($page) {
 			continue;
 		}
 		
+
 		$rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
 
 		$rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";

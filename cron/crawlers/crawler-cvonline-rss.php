@@ -11,7 +11,7 @@ function getContent($link) {
 	$html=getpagebycurl($link);
 	$pageContent = new simple_html_dom();
 	$pageContent->load($html);
-	$mainPageJobPostIdentifier = "div[id=job_details]/article[id=job]";
+	$mainPageJobPostIdentifier = "div[id=job_desc]";
 	///$mainPageJobPostIdentifier = "div[id=job_details]/div[id=job_main]";
 	$out="";
 	foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
@@ -19,6 +19,7 @@ function getContent($link) {
 		//echo $f;
 		$f = str_replace("A megfelelő működéshez  Javascript engedélyezése szükséges","",$f);
 		$f = str_replace("Jelentkezés e-mail címen:","",$f);
+		$f = str_replace("Munkavégzéhelye:","",$f);
 		$f = str_replace("Jelentkezés","",$f);
 		$f = str_replace("Állás","",$f);
 		$f = str_replace("továbbküldése","",$f);
@@ -38,12 +39,13 @@ echo setXMLHeader($siteToCrawl);
 function getLinks($page) {
 	global $siteToCrawl, $LIMIT, $CNT;
 
-	$mainPageJobPostIdentifier = "article[class=job]";
-	$mainPageJobPostTitleIdentifier = "div[class=title]/div[class=function_salary]/h2,h3";
-	$mainPageJobPostLinkIdentifier = "div[class=title]/div[class=function_salary]/h2/a";
-	$mainPageJobPostLinkIdentifier2 = "div[class=title]/div[class=function_salary]/h3/a";
-	$mainPageNextLinkIdentifier = "a[class=next]";
-	$descriptionfilter = "div[class=job_description]";
+	$mainPageJobPostIdentifier = "div[class=job-columns]";
+	//$mainPageJobPostTitleIdentifier = "div[class=job-job-columns]/div[class=list-title]/div[class=function-title]/h3/span[itemprop=title]";
+	$mainPageJobPostTitleIdentifier = "div[class=function-title]/h3/a";
+	$mainPageJobPostLinkIdentifier = "div[class=function-title]/h3/a";
+	//$mainPageJobPostLinkIdentifier2 = "div[class=title]/div[class=function_salary]/h3/a";
+	$mainPageNextLinkIdentifier = "li[class=arrow]/a";
+	//$descriptionfilter = "div[class=job-description]";
 	$pubdatefilter = "span[itemprop=datePosted]";
 
 	$jobPostPubDate = date("Y-m-d H:i:s");
@@ -64,31 +66,45 @@ function getLinks($page) {
 		}
 		$CNT++;
 
+		//die(replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext))))));
+		//die($jobPostEntry);
+
 		$rssContentItem = "<item>\n";
 		$jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
 		
+
 		if (!$jobPostTitle){
 			continue;
 		}
-		$jobdescr = sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($descriptionfilter, 0)->plaintext))));
-		$pubdate = replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext);
+		//$jobdescr = sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($descriptionfilter, 0)->plaintext))));
 		
-		$pubdate=str_replace(".","-",$pubdate);
-		$pubdate=trim($pubdate,"-");
-		if ($pubdate){
-			$jobPostPubDate=$pubdate." 00:00:01";
-		}
+		//die($jobdescr);
+		$jobdescr = "";
+
+		/*
+		$pubdate = replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext);
+		*/
+		
+		
+
+		//$pubdate=str_replace(".","-",$pubdate);
+		//$pubdate=trim($pubdate,"-");
+		//if ($pubdate){
+			//$jobPostPubDate=$pubdate." 00:00:01";
+		//}
 		
 		//check last date
-		$jobPostPubDate_i=strtotime($jobPostPubDate);
-		if ($jobPostPubDate_i < $LAD){
-			continue;
-		}
+		//$jobPostPubDate_i=strtotime($jobPostPubDate);
+		//if ($jobPostPubDate_i < $LAD){
+		//	continue;
+		//}
 		
 		//check future
-		if ($jobPostPubDate_i > time()){
-			$jobPostPubDate = date("Y-m-d 00:00:01");
-		}
+		//if ($jobPostPubDate_i > time()){
+		//	$jobPostPubDate = date("Y-m-d 00:00:01");
+		//}
+
+		$jobPostPubDate = date("Y-m-d 00:00:01");
 		
 		$rssContentItem .= "<title>". strip_tags($jobPostTitle) . "</title>\n";
 		
@@ -110,8 +126,9 @@ function getLinks($page) {
 			$jobdescr.="\n".$extracontent;
 		}
 		
-		$rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
 
+		//die($jobdescr);
+		$rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
 
 
 		$rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";
@@ -129,6 +146,7 @@ function getLinks($page) {
 	// get next URL; can be very site specific
 	foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
 		$nextLink = "http://" . $siteToCrawl . $link->href;
+		die($nextLink);
 		//echo $nextLink, "\n";
 		// if there's another "next" URL then crawl
 		if(!empty($nextLink)) {

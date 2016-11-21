@@ -6,7 +6,7 @@ include('simple_html_dom.php');
 include('common.php');
 
 $siteToCrawl = "allasok.monster.hu";
-$entryPoint = "/allas/IT-Szoftverfejleszt%C3%A9s_4";
+$entryPoint = "/allas/IT-Szoftverfejleszt%C3%A9s_4?sort=dt.rv.di";
 $z=2;
 
 echo setXMLHeader($siteToCrawl);
@@ -15,7 +15,7 @@ function getContent($link) {
 	$html=getpagebycurl($link);
 	$pageContent = new simple_html_dom();
 	$pageContent->load($html);
-	$mainPageJobPostIdentifier = "div[align=center],div[id=monsterAppliesContentHolder]";
+	$mainPageJobPostIdentifier = "div[class=keret]";
 	$out="";
 	foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
 		$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext))));
@@ -29,14 +29,14 @@ function getContent($link) {
 function getLinks($page) {
 	global $siteToCrawl, $LIMIT, $CNT, $entryPoint, $z;
 
-	$mainPageJobPostIdentifier = "tr[class=odd],tr[class=even]";
-	$mainPageJobPostTitleIdentifier = "td[class=firstColumn]/label[class=skip]";
-	$mainPageJobPostLinkIdentifier = "a[class=slJobTitle]";
+	$mainPageJobPostIdentifier = "div[class=js_result_container]";
+	$mainPageJobPostTitleIdentifier = "div[class=jobTitle]";
+	$mainPageJobPostLinkIdentifier = "div[class=jobTitle]/a";
 	
-	$pubdatefilter = "div[class=fnt20],div[class=fnt40]";
+	$pubdatefilter = "div[class=extras]/div[class=postedDate]";
 	$descfilter = "div[class=row]/div[class=list_tasks]";
 	
-	$mainPageNextLinkIdentifier = "a[class=nextLink]";
+	$mainPageNextLinkIdentifier = "div[class=pagingWrapper]";
 
 	$jobPostPubDate = date("Y-m-d H:i:s");
 	$jobPostAuthor = $siteToCrawl;
@@ -67,6 +67,7 @@ function getLinks($page) {
 		}
 		$CNT++;
 		
+
 		$rssContentItem = "<item>\n";
 		$jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
 		
@@ -76,9 +77,13 @@ function getLinks($page) {
 			continue;
 		}
 		
+		
+
 		$pubdate = preg_replace('!\s+!', ' ', replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext));
 		$pubdate = strtolower($pubdate);
 		
+		
+
 		//echo $pubdate,"\n";
 		
 		if (startsWith($pubdate,"ma")){
@@ -121,13 +126,17 @@ function getLinks($page) {
 			$jobPostPubDate = date("Y-m-d 00:00:01");
 		}
 		
-		$desc = $jobPostEntry->find($descfilter, 0)->plaintext;
+		$desc='';
+		//$desc = $jobPostEntry->find($descfilter, 0)->plaintext;
 		//echo $desc."\n";
 		
+		
+
 		$rssContentItem .= "<title>" . strip_tags(replaceCharsForRSS($jobPostTitle)) . "</title>\n";
 		
 		// get the URL of the entry
 		$jobPostLink = $jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
+		
 		
 		if (!$jobPostLink){
 			continue;
@@ -139,6 +148,7 @@ function getLinks($page) {
 			$desc.="\n".$extracontent;
 		}
 		
+
 		/*
 		echo $CNT,"\n";
 		echo $jobPostTitle."\n----\n";
@@ -167,9 +177,8 @@ function getLinks($page) {
 
 	// get next URL; can be very site specific
 	foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
-		$nextLink = "http://" . $siteToCrawl . $entryPoint."?pg=".$z;
+		$nextLink = "http://" . $siteToCrawl . $entryPoint."&pg=".$z;
 		$z++;
-		echo $nextLink."\n";
 		if(!empty($nextLink)) {
 			@$pageContent->clear();
 			unset($pageContent);
