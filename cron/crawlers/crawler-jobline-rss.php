@@ -17,19 +17,34 @@ function getContent($link) {
 //<section itemprop="skills"
 //	$descriptionfilter = "section[class=adv]/section[itemprop=skills]";
 	$descriptionfilter = "section[itemprop=PositionInfo]";
-	$out = trim(html_entity_decode($pageContent->find($descriptionfilter, 0)->plaintext, 1, "UTF-8"));
-	//echo "\n-----\n".$out."\n-----\n";
-	if (empty($out)){
-		$out = trim(html_entity_decode($pageContent->find("ul", 0)->plaintext));
+	$descriptionfilter3 = "ul";
+	$descriptionfilter4 = "div[class=m-modular_content]";
+        $out="";
+        foreach($pageContent->find($descriptionfilter) as $jobPostEntry) {
+                $f = $jobPostEntry->plaintext;
+                //echo $f;
+                $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+        }
+	if (empty($out) || count($out) < 50){
+    	    foreach($pageContent->find($descriptionfilter3) as $jobPostEntry) {
+            	    $f = $jobPostEntry->plaintext;
+            	    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+    	    }
 	}
-//	echo $out;
-//	echo "\n------\n";
+	if (empty($out) || count($out) < 50){
+    	    foreach($pageContent->find($descriptionfilter4) as $jobPostEntry) {
+            	    $f = $jobPostEntry->plaintext;
+            	    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+    	    }
+	}
 	@$pageContent->clear();
 	unset($pageContent);
 	$pageContent = NULL;
 	$html = NULL;
 	return $out;
 }
+
+//die(getContent("https://jobline.hu/allas/business_analyst_csoportvezeto/ZL-0744"));
 
 echo setXMLHeader($siteToCrawl);
 
@@ -66,12 +81,14 @@ function getLinks($page) {
 		$jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
 		
 		
-		//echo $jobPostTitle."\n";
+//		echo $jobPostTitle.$CNT."\n";
+//		continue;
 		
 		if (!$jobPostTitle){
 			continue;
 		}
 		
+			
 
 		/*
 		$pubdate = trim(str_replace(" ", "", str_replace(".","-",replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext))),"-");

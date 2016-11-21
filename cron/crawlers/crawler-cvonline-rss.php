@@ -12,6 +12,7 @@ function getContent($link) {
 	$pageContent = new simple_html_dom();
 	$pageContent->load($html);
 	$mainPageJobPostIdentifier = "div[id=job_desc]";
+	$mainPageJobPostIdentifier2 = "div[id=job_template]";
 	///$mainPageJobPostIdentifier = "div[id=job_details]/div[id=job_main]";
 	$out="";
 	foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
@@ -26,6 +27,22 @@ function getContent($link) {
 		$f = str_replace("ismerősnek","",$f);
 		$f = str_replace("Nyomtatás","",$f);
 		$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+	}
+	if (empty($out)){
+	foreach($pageContent->find($mainPageJobPostIdentifier2) as $jobPostEntry) {
+		$f = $jobPostEntry->plaintext;
+		//echo $f;
+		$f = str_replace("A megfelelő működéshez  Javascript engedélyezése szükséges","",$f);
+		$f = str_replace("Jelentkezés e-mail címen:","",$f);
+		$f = str_replace("Munkavégzéhelye:","",$f);
+		$f = str_replace("Jelentkezés","",$f);
+		$f = str_replace("Állás","",$f);
+		$f = str_replace("továbbküldése","",$f);
+		$f = str_replace("ismerősnek","",$f);
+		$f = str_replace("Nyomtatás","",$f);
+		$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+	}
+
 	}
 	
 	@$pageContent->clear();
@@ -146,7 +163,6 @@ function getLinks($page) {
 	// get next URL; can be very site specific
 	foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
 		$nextLink = "http://" . $siteToCrawl . $link->href;
-		die($nextLink);
 		//echo $nextLink, "\n";
 		// if there's another "next" URL then crawl
 		if(!empty($nextLink)) {
