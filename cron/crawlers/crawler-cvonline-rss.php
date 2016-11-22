@@ -11,8 +11,7 @@ function getContent($link) {
 	$html=getpagebycurl($link);
 	$pageContent = new simple_html_dom();
 	$pageContent->load($html);
-	$mainPageJobPostIdentifier = "div[id=job_desc]";
-	$mainPageJobPostIdentifier2 = "div[id=job_template]";
+	$mainPageJobPostIdentifier = "div[id=job_desc],div[id=job_template],div[class=job_details]";
 	///$mainPageJobPostIdentifier = "div[id=job_details]/div[id=job_main]";
 	$out="";
 	foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
@@ -28,28 +27,14 @@ function getContent($link) {
 		$f = str_replace("Nyomtatás","",$f);
 		$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
 	}
-	if (empty($out)){
-	foreach($pageContent->find($mainPageJobPostIdentifier2) as $jobPostEntry) {
-		$f = $jobPostEntry->plaintext;
-		//echo $f;
-		$f = str_replace("A megfelelő működéshez  Javascript engedélyezése szükséges","",$f);
-		$f = str_replace("Jelentkezés e-mail címen:","",$f);
-		$f = str_replace("Munkavégzéhelye:","",$f);
-		$f = str_replace("Jelentkezés","",$f);
-		$f = str_replace("Állás","",$f);
-		$f = str_replace("továbbküldése","",$f);
-		$f = str_replace("ismerősnek","",$f);
-		$f = str_replace("Nyomtatás","",$f);
-		$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
-	}
-
-	}
 	
 	@$pageContent->clear();
 	unset($pageContent);
 	$pageContent = NULL;
 	return $out;
 }
+
+//die(getcontent("http://www.cvonline.hu/vezeto-fejleszto-c-net/1098361/j.html"));
 
 echo setXMLHeader($siteToCrawl);
 
