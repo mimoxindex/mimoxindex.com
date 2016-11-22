@@ -21,3 +21,8 @@ then
 	mkswap /mnt/swapfile
 	swapon /mnt/swapfile
 fi
+
+if [[ -f /mnt/swapfile ]]; 
+then 
+    swapon /mnt/swapfile > /dev/null 2>&1 
+fi
