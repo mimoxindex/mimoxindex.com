@@ -19,23 +19,23 @@ function getContent($link) {
 	$descriptionfilter = "section[itemprop=PositionInfo]";
 	$descriptionfilter3 = "ul";
 	$descriptionfilter4 = "div[class=m-modular_content]";
-        $out="";
-        foreach($pageContent->find($descriptionfilter) as $jobPostEntry) {
-                $f = $jobPostEntry->plaintext;
-                //echo $f;
-                $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
-        }
+		$out="";
+		foreach($pageContent->find($descriptionfilter) as $jobPostEntry) {
+				$f = $jobPostEntry->plaintext;
+				//echo $f;
+				$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+		}
 	if (empty($out) || count($out) < 50){
-    	    foreach($pageContent->find($descriptionfilter3) as $jobPostEntry) {
-            	    $f = $jobPostEntry->plaintext;
-            	    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
-    	    }
+			foreach($pageContent->find($descriptionfilter3) as $jobPostEntry) {
+					$f = $jobPostEntry->plaintext;
+					$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+			}
 	}
 	if (empty($out) || count($out) < 50){
-    	    foreach($pageContent->find($descriptionfilter4) as $jobPostEntry) {
-            	    $f = $jobPostEntry->plaintext;
-            	    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
-    	    }
+			foreach($pageContent->find($descriptionfilter4) as $jobPostEntry) {
+					$f = $jobPostEntry->plaintext;
+					$out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+			}
 	}
 	@$pageContent->clear();
 	unset($pageContent);
@@ -52,7 +52,8 @@ function getLinks($page) {
 	global $siteToCrawl, $LIMIT, $CNT;
 
 	$mainPageJobPostIdentifier = "article[class=m-job_item]";
-	$mainPageJobPostTitleIdentifier = "h1[class=job-title]";
+	//$mainPageJobPostIdentifier = "h2[class=job-title]";
+	$mainPageJobPostTitleIdentifier = "h2[class=job-title]";
 	$mainPageJobPostLinkIdentifier = "span[href]";
 	$mainPageNextLinkIdentifier = "a[class=next]";
 	$descriptionfilter = "div[class=post-content]";
@@ -81,8 +82,11 @@ function getLinks($page) {
 		$jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
 		
 		
-//		echo $jobPostTitle.$CNT."\n";
-//		continue;
+		//var_dump($jobPostEntry);
+		//echo $jobPostTitle.$CNT."\n";
+		//echo $jobPostTitle."\n";
+		//echo "-----------"."\n";
+		
 		
 		if (!$jobPostTitle){
 			continue;
@@ -117,12 +121,11 @@ function getLinks($page) {
 
 		$rssContentItem .= "<title>". strip_tags($jobPostTitle) . "</title>\n";
 		// get the URL of the entry
-		$lnk=$jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
-		
+		//$lnk=$jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
+		$lnk = $jobPostEntry->find($mainPageJobPostTitleIdentifier."/a", 0)->href;
 		
 
 		$jobPostLink = "https://" . $siteToCrawl . $lnk;
-		
 		
 
 		//echo $lnk."\n";
@@ -130,6 +133,7 @@ function getLinks($page) {
 		if (!empty($lnk)){
 			$headers = @get_headers($jobPostLink);
 			//echo $jobPostLink."\n";
+			//continue;
 			//print_r($headers);
 			if(strpos($headers[0],'200')===false) {} else {
 				$jobdescr=getContent($jobPostLink);

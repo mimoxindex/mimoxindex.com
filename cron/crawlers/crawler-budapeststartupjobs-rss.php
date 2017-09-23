@@ -1,4 +1,8 @@
 <?php
+
+// Ez mar nem megy, atrendeztek teljesen az oldalt.
+die();
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 include('simple_html_dom.php');

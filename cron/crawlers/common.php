@@ -94,7 +94,7 @@ function getpagebycurl($url){
 			CURLOPT_FOLLOWLOCATION => true,     // follow redirects
 			CURLOPT_ENCODING       => "",       // handle all encodings
 			CURLOPT_COOKIESESSION  => true,
-			CURLOPT_USERAGENT      => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36", // who am i
+			CURLOPT_USERAGENT      => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36", // who am i
 			CURLOPT_AUTOREFERER    => true,     // set referer on redirect
 			CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
 			CURLOPT_TIMEOUT        => 120,      // timeout on response
