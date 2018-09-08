@@ -628,13 +628,30 @@ def term_rank_data(order='11'):
 					need_form=False
 			if need_form:
 				recaptcha_client = RecaptchaClient(RECAPTCHA_PRIVKEY, RECAPTCHA_PUBKEY)
+				
 				if need_new_recaptcha:
 					rec=recaptcha_client.get_challenge_markup()
 				else:
 					rec=recaptcha_client.get_challenge_markup(was_previous_solution_incorrect=True)
+				
+				
 				s["termsendid"] = str(uuid.uuid4())
 				s.save()
+				
+				
 				page+='<tr><td colspan="5">Sikertelen keresés: <b>\''+searchterm+'\'</b><br /><br />Sajnos nincs találat. Ez valószínűleg azt jelenti, hogy vagy nem ismerjük, és ezért nem követjük még. Kisebb százalékban előfordulhat, hogy ismerjük, hallottunk róla, de valamiért úgy döntöttönk, hogy nem vesszük be a listába. Pl. azokat a kifejezéseket, amik inkább jelentenek cégneveket, termékneveket és nem technológiákat, kihúztuk, illetve olyanokat is, mint a HTML, mivel túl sok találat lenne rá, és nem annyira releváns. (A html5 viszont szerepel.) Amennyiben úgy gondolod, hogy jó lenne az általad keresett kifejezést is nyomonkövetnünk, kérjük tegyél javaslatot! Köszönjük!<br /><hr>'
+				
+				#old recpatcha
+				"""
+				<!-- recaptcha -->
+				<tr>
+					<td align="left"> <input type="image" src="./static/kuldesgomb_100.png" height="28" alt="Submit Form" /></td>
+					<td align="left">
+					'''+rec+'''
+					</td>
+				</tr>
+				"""
+				
 				page +='''
 				<form id="submit_term" action="./submit_term/" method="post">
 				<table width="100%" border="0" cellpadding="2px" cellspacing="0">
@@ -651,12 +668,16 @@ def term_rank_data(order='11'):
 				  <td>E-mail címed:</td>
 				  <td>&nbsp;<input type="text" name="email" id="email" title="e-mail formátum szükséges"  >*</td>
 				</tr>
+				
+				<!-- recaptcha -->
 				<tr>
 					<td align="left"> <input type="image" src="./static/kuldesgomb_100.png" height="28" alt="Submit Form" /></td>
 					<td align="left">
-					'''+rec+'''
+						<div class="g-recaptcha" data-sitekey="'''+RECAPTCHA_PUBKEY+'''"></div>
 					</td>
 				</tr>
+				<!-- /recaptcha -->
+				
 				<tr>
 					<td colspan="2">* a mezők kitöltése kötelező</td>
 				</tr>
