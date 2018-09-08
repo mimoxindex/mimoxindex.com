@@ -836,7 +836,7 @@ def submit_term():
 		}
 		rechaptcha_request = requests.post('https://www.google.com/recaptcha/api/siteverify', data=recapcha_check_data)
 		rechaptcha_result = rechaptcha_request.json()
-		if result['success']:
+		if rechaptcha_result['success']:
 			is_solution_correct=True
 		else:
 			is_solution_correct=False
