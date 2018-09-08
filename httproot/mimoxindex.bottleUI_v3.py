@@ -7,10 +7,10 @@ from os import listdir
 from os.path import isfile, join
 import json
 import smtplib
-from recaptcha import RecaptchaClient
 import uuid
 import sys
 import cPickle as pickle
+import requests
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -627,12 +627,13 @@ def term_rank_data(order='11'):
 					page+="<b>Sikeretelen oldalküldés (POST, URL ID), kérjük próbáld újra.</b><br />"
 					need_form=False
 			if need_form:
-				recaptcha_client = RecaptchaClient(RECAPTCHA_PRIVKEY, RECAPTCHA_PUBKEY)
 				
-				if need_new_recaptcha:
-					rec=recaptcha_client.get_challenge_markup()
-				else:
-					rec=recaptcha_client.get_challenge_markup(was_previous_solution_incorrect=True)
+				#old recpatchav1
+				#recaptcha_client = RecaptchaClient(RECAPTCHA_PRIVKEY, RECAPTCHA_PUBKEY)
+				#if need_new_recaptcha:
+				#	rec=recaptcha_client.get_challenge_markup()
+				#else:
+				#	rec=recaptcha_client.get_challenge_markup(was_previous_solution_incorrect=True)
 				
 				
 				s["termsendid"] = str(uuid.uuid4())
@@ -817,16 +818,40 @@ def submit_term():
 	term = request.forms.get('term').decode()
 	info = request.forms.get('info').decode()
 	email = request.forms.get('email').decode()
-	captcha_term = request.forms.get('recaptcha_response_field').decode()
-	captcha_id = request.forms.get('recaptcha_challenge_field').decode()
 	client_ip = str(request.headers.get('X-Forwarded-For'))
-	recaptcha_client = RecaptchaClient(RECAPTCHA_PRIVKEY, RECAPTCHA_PUBKEY)
 	captcha_response=None
+	is_solution_correct=None
+	
+	#old recaptchav1
+	#captcha_term = request.forms.get('recaptcha_response_field').decode()
+	#captcha_id = request.forms.get('recaptcha_challenge_field').decode()
+	#recaptcha_client = RecaptchaClient(RECAPTCHA_PRIVKEY, RECAPTCHA_PUBKEY)
+	
+	#new recaptcha v2
 	try:
-		is_solution_correct = recaptcha_client.is_solution_correct(captcha_term,captcha_id,client_ip)
+		g_recaptcha_response=request.forms.get('g-recaptcha-response').decode()
+		recapcha_check_data = {
+				'secret': RECAPTCHA_PRIVKEY,
+				'response': g_recaptcha_response
+		}
+		rechaptcha_request = requests.post('https://www.google.com/recaptcha/api/siteverify', data=recapcha_check_data)
+		rechaptcha_result = rechaptcha_request.json()
+		if result['success']:
+			is_solution_correct=True
+		else:
+			is_solution_correct=False
+		captcha_response=True
 	except Exception as exc:
-		print "reCaptcha exception: ",str(exc)
+		print "reCaptchav2 exception: ",str(exc)
 		captcha_response = False
+	
+	#old recaptcha
+	#try:
+	#	is_solution_correct = recaptcha_client.is_solution_correct(captcha_term,captcha_id,client_ip)
+	#except Exception as exc:
+	#	print "reCaptcha exception: ",str(exc)
+	#	captcha_response = False
+	
 	else:
 		if is_solution_correct:
 			print "reCaptcha channalnge was OK!",term,info,email,client_ip
