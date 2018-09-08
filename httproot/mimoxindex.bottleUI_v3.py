@@ -339,6 +339,11 @@ def term_rank_data(order='11'):
 		pass
 	
 	print searchterm
+	
+	#clean up searchterm
+	searchterm_invalid_chars=["<",">",'"',"'","`","(",")","[","]","{","}","&","@","$","^","~","ˇ","˘",'˝',";",":"]
+	searchterm="".join([char for char in searchterm if char not in searchterm_invalid_chars])
+	
 	if searchterm:
 		order = 1
 		groupby=0
