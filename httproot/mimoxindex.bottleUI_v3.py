@@ -341,7 +341,7 @@ def term_rank_data(order='11'):
 	print searchterm
 	
 	#clean up searchterm
-	searchterm_invalid_chars=["<",">",'"',"'","`","(",")","[","]","{","}","&","@","$","^","~","ˇ","˘",'˝',";",":"]
+	searchterm_invalid_chars=["<",">",'"',"'","`","(",")","[","]","{","}","&","@","$","^","~","ˇ","˘",'˝',";",":","/","=","!","%","\\","|","€"]
 	searchterm="".join([char for char in searchterm if char not in searchterm_invalid_chars])
 	
 	if searchterm:
