@@ -2,6 +2,8 @@
 
 SCRIPT_PATH="/var/www/mimoxindex.com/httproot/mimoxindex.bottleUI.py"
 
+export SITENAME="mimoxindex.com"
+export SITEPROTOCOL="https"
 export RECAPTCHA_PRIVKEY=""
 export RECAPTCHA_PUBKEY=""
 export GMAIL_PWD=""

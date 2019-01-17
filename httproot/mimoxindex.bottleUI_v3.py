@@ -52,6 +52,8 @@ UPLOADS=os.environ.get('UPLOADS')
 CACHE=os.environ.get('CACHE')
 CACHE_TIME=3600 #1h
 CACHE_USE=True
+SITENAME=os.environ.get('SITENAME')
+SITEPROTOCOL=os.environ.get('SITEPROTOCOL')
 
 TERM_EMAIL_RECPS=['mimoxindex@gmail.com','mimoxindex@mimox.com']
 ##########################################
@@ -87,20 +89,20 @@ def checkfulllist(yesno="no"):
 	ref=request.headers.get('Referer')
 	if "/fulllist" in q and yesno == "yes":
 		if ref:
-			if ref.startswith("http://mimoxindex.com") or ref.startswith("http://www.mimoxindex.com/"):
+			if ref.startswith(SITEPROTOCOL+"://"+SITENAME) or ref.startswith(SITEPROTOCOL+"://www."+SITENAME+"/"):
 				#redirect(request.headers.get('Referer'))
-				redirect("http://www.mimoxindex.com/1")
+				redirect(SITEPROTOCOL+"://www."+SITENAME+"/1")
 			else:
 				q=q.split("/fulllist")[0]
 				redirect(q)
 		else:
-			redirect("http://www.mimoxindex.com/1")
+			redirect(SITEPROTOCOL+"://www."+SITENAME+"/1")
 	else:
 		if ref:
-			if ref.startswith("http://mimoxindex.com") or ref.startswith("http://www.mimoxindex.com/"):
+			if ref.startswith(SITEPROTOCOL+"://"+SITENAME) or ref.startswith(SITEPROTOCOL+"://www."+SITENAME+"/"):
 				redirect(request.headers.get('Referer'))
 		else:
-			redirect("http://www.mimoxindex.com/1")
+			redirect(SITEPROTOCOL+"://www."+SITENAME+"/1")
 		#q=q.split("/fulllist")[0]
 		#redirect(q)
 
@@ -609,7 +611,7 @@ def term_rank_data(order='11'):
 								s["captcha_challange"] == ""
 								s["termsendid"] == ""
 								s.save()
-								page+="<script>$(document).ready(function () { window.setTimeout(function () { location.href = 'http://www.mimoxindex.com'; }, 3000) });</script>"
+								page+="<script>$(document).ready(function () { window.setTimeout(function () { location.href = '"+SITEPROTOCOL+"://www."+SITENAME+"'; }, 3000) });</script>"
 								need_form=False
 							elif s["captcha_challange"] == "NOK":
 								page+="<b><font color=\"red\">Sikertelen reCaptcha ellenőrzés (challange error), kérjük próbáld újra!</font></b><br /><br />"
@@ -663,7 +665,7 @@ def term_rank_data(order='11'):
 				</tr>
 				<tr>
 				  <td>Információ róla a neten:</td>
-				  <td>&nbsp;<input type="text" name="info" id="info" title="http://"><br></td>
+				  <td>&nbsp;<input type="text" name="info" id="info" title="'''+SITEPROTOCOL+'''://"><br></td>
 				</tr>
 				<tr>
 				  <td>E-mail címed:</td>
@@ -861,15 +863,15 @@ def submit_term():
 			print "reCaptcha channalnge was false!",term,info,email,client_ip
 			captcha_response = False
 	if ref:
-		if ref.startswith("http://mimoxindex.com") or ref.startswith("http://www.mimoxindex.com/"):
+		if ref.startswith(SITEPROTOCOL+"://"+SITENAME) or ref.startswith(SITEPROTOCOL+"://www."+SITENAME+"/"):
 			if captcha_response:
 				s["captcha_challange"]="OK"
 				s.save()
-				redirect("http://www.mimoxindex.com/?searchterm="+term+"&termsendid="+s["termsendid"])
+				redirect(SITEPROTOCOL+"://www."+SITENAME+"/?searchterm="+term+"&termsendid="+s["termsendid"])
 			else:
 				s["captcha_challange"]="NOK"
 				s.save()
-				redirect("http://www.mimoxindex.com/?searchterm="+term+"&termsendid="+s["termsendid"])
+				redirect(SITEPROTOCOL+"://www."+SITENAME+"/?searchterm="+term+"&termsendid="+s["termsendid"])
 
 
 #deprecated
