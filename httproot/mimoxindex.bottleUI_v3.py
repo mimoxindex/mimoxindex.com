@@ -793,6 +793,7 @@ def ajax_gethistory(searchdate=""):
   searchdate=""
   s = request.session
   pickle_date={}
+  return_dict={}
   trenddate=""
   searchdate_dict = request.query.decode()
   if 'searchdate' in searchdate_dict:
@@ -814,10 +815,11 @@ def ajax_gethistory(searchdate=""):
         trenddate=str(irows[0][0])
         pickle_date=pickle.loads(str(irows[0][1]))
         termcount=len(pickle_date)
-        pickle_date["resultdate"]=trenddate[:10]
-        pickle_date["termcount"]=termcount
+        return_dict["resultdate"]=trenddate[:10]
+        return_dict["termcount"]=termcount
+        return_dict["result"]=pickle_date
   closeconn(db,c)
-  return json.dumps(pickle_date)
+  return json.dumps(return_dict)
   
   
 @route('/submit_term/', method='POST')
