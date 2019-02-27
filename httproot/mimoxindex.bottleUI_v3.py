@@ -806,7 +806,7 @@ def ajax_gethistory(searchdate=""):
     c.execute(qry, (searchdate+'%'))
   else:
     qry="SELECT trenddate,pickledump FROM trendhisory ORDER BY trenddate DESC LIMIT 1"
-    c.execute(qry, (searchdate))
+    c.execute(qry)
   irows = c.fetchall()
   if irows:
     if len(irows):
