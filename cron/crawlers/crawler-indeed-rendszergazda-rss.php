@@ -1,116 +1,110 @@
 <?php
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 include('simple_html_dom.php');
 include('common.php');
 
-$siteToCrawl = "www.cvonline.hu";
-$entryPoint = "/informatika-it";
-$MAX=250;
-$counter=1;
-$fetchPagesCount=100;
+$siteToCrawl = "hu.indeed.com";
+$entryPoint = "/jobs?q=rendszergazda&l=Budapest&sort=date";
+$z=10;
+$fetchPagesCount=20;
 
+$MAX=$z*$fetchPagesCount;
+$counter=1;
+//fetched entries = $z * $fetchPagesCount, e.g.: 10 * 10 = 100.
+
+echo setXMLHeader($siteToCrawl);
 
 function getContent($link) {
   $html=getpagebycurl($link);
   $pageContent = new simple_html_dom();
   $pageContent->load($html);
-  $mainPageJobPostIdentifier = "div[id=job_desc],div[id=job_template],div[class=job_details],div[class=job-content]";
-  ///$mainPageJobPostIdentifier = "div[id=job_details]/div[id=job_main]";
+  //$mainPageJobPostIdentifier = "div,span,h1,h2";
+  $mainPageJobPostIdentifier = "div[id=jobDescriptionText]";
   $out="";
   foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
-    $f = $jobPostEntry->plaintext;
-    //echo $f;
-    $f = str_replace("A megfelelő működéshez  Javascript engedélyezése szükséges","",$f);
-    $f = str_replace("Jelentkezés e-mail címen:","",$f);
-    $f = str_replace("Munkavégzéhelye:","",$f);
-    $f = str_replace("Jelentkezés","",$f);
-    $f = str_replace("Állás","",$f);
-    $f = str_replace("továbbküldése","",$f);
-    $f = str_replace("ismerősnek","",$f);
-    $f = str_replace("Nyomtatás","",$f);
-    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($f))));
+    $out .= sanitize_for_xml(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext)));
   }
+  $out = trim(preg_replace('!\s+!', ' ', $out));
+  //die($out);
   @$pageContent->clear();
   unset($pageContent);
   $pageContent = NULL;
   return $out;
 }
 
-//die(getcontent("http://www.cvonline.hu/vezeto-fejleszto-c-net/1098361/j.html"));
-
-echo setXMLHeader($siteToCrawl);
-
 function getLinks($page) {
-  global $siteToCrawl, $LIMIT, $CNT, $MAX, $counter, $fetchPagesCount;
+  global $siteToCrawl, $LIMIT, $CNT, $entryPoint, $z, $fetchPagesCount, $MAX, $counter;
 
-  $mainPageJobPostIdentifier = "div[class=list-title]";
-  //$mainPageJobPostIdentifier = "div[class=job]";
-  //$mainPageJobPostTitleIdentifier = "div[class=job-job-columns]/div[class=list-title]/div[class=function-title]/h3/span[itemprop=title]";
-  //$mainPageJobPostTitleIdentifier = "div[class=function-title]/h3/a";
-  $mainPageJobPostTitleIdentifier = "div[class=function-title]";
-  $mainPageJobPostLinkIdentifier = "div[class=function-title]/h3/a";
-  //$mainPageJobPostLinkIdentifier2 = "div[class=title]/div[class=function_salary]/h3/a";
-  $mainPageNextLinkIdentifier = "li[class=arrow]/a";
-  //$descriptionfilter = "div[class=job-description]";
-  $pubdatefilter = "span[itemprop=datePosted]";
+  $mainPageJobPostIdentifier = "div[class=title]";
+  $mainPageJobPostTitleIdentifier = "/a";
+  $mainPageJobPostLinkIdentifier = "div[class=jobTitle]/a";
+  
+  $pubdatefilter = "div[class=extras]/div[class=postedDate]";
+  $descfilter = "div[class=row]/div[class=list_tasks]";
+  
+  $mainPageNextLinkIdentifier = "div[class=pagingWrapper]";
 
   $jobPostPubDate = date("Y-m-d H:i:s");
   $jobPostAuthor = $siteToCrawl;
 
+  //echo "################################################\n";
+  echo $page;
+
   $html=getpagebycurl($page);
-  //die($html);
+  //echo "################################################\n";
+  //echo($html);
+  //echo "################################################\n\n";
+  
+//  $html = file_get_contents("test.html");
+  $html = str_ireplace('class="slJobTitle"'," ",$html);
+  
   $pageContent = new simple_html_dom();
   $pageContent->load($html);
+  
+  if (!$pageContent){
+    return;
+  }
+
   $LAD=lastAcceptDate();
   
-
   // loop through item entries on main page
   foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
-    if ($CNT >= $LIMIT){
+    
+    if ($CNT >= 500){
       echo "<!-- CNT LIMIT -->";
       echo "</channel>\n";
       echo "</rss>\n";
       die();
     }
     $CNT++;
-
-    $desc='';
     
-    //die(replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext))))));
-    //die($jobPostEntry);
-
     $rssContentItem = "<item>\n";
     $jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
     
-    $jobPostTitle = $jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->find("h3", 0)->find("a",0)->plaintext;
-    $jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostTitle)))));
-
-    //echo($jobPostTitle."\n\n");
-    //continue;
-
     if (!$jobPostTitle){
       continue;
     }
-    //$jobdescr = sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($descriptionfilter, 0)->plaintext))));
-    
-    //die($jobdescr);
-    $jobdescr = "";
 
     $jobPostPubDate = date("Y-m-d 00:00:01");
     
-    $rssContentItem .= "<title>". strip_tags($jobPostTitle) . "</title>\n";
+    $desc='';
+    
+    $rssContentItem .= "<title>" . strip_tags(replaceCharsForRSS($jobPostTitle)) . "</title>\n";
+    
+    //echo($rssContentItem);
     
     // get the URL of the entry
-    $lnk = $jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->find("h3", 0)->find("a",0)->href;
-    if (!$lnk){
+    $jobPostLink = $jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->href;
+    
+    
+    if (!$jobPostLink){
       continue;
     }
     
-    //echo($lnk."\n\n");
-    //continue;
-    
-    $jobPostLink = "https://" . $siteToCrawl . $lnk;
+    //check redirect site
+    $jobPostLink = "https://" . $siteToCrawl . $jobPostLink;
     
     for ($x = 0; $x <= 10; $x++) {
       //echo "$x redirect...\n";
@@ -139,7 +133,7 @@ function getLinks($page) {
     //$headers = @get_headers($jobPostLink,1);
     //print_r($headers);
     
-    for ($y = 0; $y <= 6; $y++) {
+    for ($y = 0; $y <= 5; $y++) {
       $extracontent=getContent($jobPostLink);
       if ($extracontent){
         $desc.="\n".$extracontent;
@@ -152,19 +146,17 @@ function getLinks($page) {
     
     $rssContentItem .= "<count>" . $counter . "</count>\n";
     
-    //die($jobdescr);
     $rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
-
-
+    
+    // set pubDate
     $rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";
     // get main content body of the entry
-    $rssContentItem .= "<description><![CDATA[ " . str_replace("Pozícióleírás","",preg_replace('!\s+!', ' ', stripInvalidXml($desc))) . " ]]></description>\n";
+    
+    $rssContentItem .= "<description><![CDATA[ " . preg_replace('!\s+!', ' ', stripInvalidXml($desc)) . " ]]></description>\n";
     // set author as "source of data"
     $rssContentItem .= "<author>" . strip_tags($jobPostAuthor) . "</author>\n";
-
-    //echo "jobPostTitle :",$trimmedTitle,", jobPostLink: ",$jobPostLink," pubdate: ",$pubdate,"\n";
-    $rssContentItem .= "</item>\n";
     
+    $rssContentItem .= "</item>\n";
     echo $rssContentItem;
     
     $counter++;
@@ -172,9 +164,9 @@ function getLinks($page) {
       return false;
     }
   }
-
-  for ($x = 2; $x <= $fetchPagesCount; $x++) {
-    $nextLink = "https://" . $siteToCrawl . $entryPoint."/page".$x;
+  
+  for ($x = 0; $x <= $fetchPagesCount; $x++) {
+    $nextLink = "https://" . $siteToCrawl . $entryPoint."&start=".$z;
     $headers = @get_headers($nextLink,1);
     if(strpos($headers[0],'200')===false) { break; } else {
       $extracontent=getContent($jobPostLink);
@@ -194,6 +186,7 @@ function getLinks($page) {
     }
   }
 }
+
 
 getLinks("https://" . $siteToCrawl . $entryPoint);
 echo "</channel>\n";

@@ -5,14 +5,9 @@ error_reporting(E_ALL & ~E_NOTICE);
 include('simple_html_dom.php');
 include('common.php');
 
-$siteToCrawl = "hu.indeed.com";
-$entryPoint = "/jobs?q=developer&l=Hungary&sort=date";
-$z=10;
-$fetchPagesCount=50;
-
-$MAX=$z*$fetchPagesCount;
-$counter=1;
-//fetched entries = $z * $fetchPagesCount, e.g.: 10 * 10 = 100.
+$siteToCrawl = "allasok.monster.hu";
+$entryPoint = "/allas/IT-Szoftverfejleszt%C3%A9s_4?sort=dt.rv.di";
+$z=2;
 
 echo setXMLHeader($siteToCrawl);
 
@@ -20,14 +15,11 @@ function getContent($link) {
   $html=getpagebycurl($link);
   $pageContent = new simple_html_dom();
   $pageContent->load($html);
-  //$mainPageJobPostIdentifier = "div,span,h1,h2";
-  $mainPageJobPostIdentifier = "div[id=jobDescriptionText]";
+  $mainPageJobPostIdentifier = "div[class=keret]";
   $out="";
   foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
-    $out .= sanitize_for_xml(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext)));
+    $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext))));
   }
-  $out = trim(preg_replace('!\s+!', ' ', $out));
-  //die($out);
   @$pageContent->clear();
   unset($pageContent);
   $pageContent = NULL;
@@ -35,10 +27,10 @@ function getContent($link) {
 }
 
 function getLinks($page) {
-  global $siteToCrawl, $LIMIT, $CNT, $entryPoint, $z, $fetchPagesCount, $MAX, $counter;
+  global $siteToCrawl, $LIMIT, $CNT, $entryPoint, $z;
 
-  $mainPageJobPostIdentifier = "div[class=title]";
-  $mainPageJobPostTitleIdentifier = "/a";
+  $mainPageJobPostIdentifier = "div[class=js_result_container]";
+  $mainPageJobPostTitleIdentifier = "div[class=jobTitle]";
   $mainPageJobPostLinkIdentifier = "div[class=jobTitle]/a";
   
   $pubdatefilter = "div[class=extras]/div[class=postedDate]";
@@ -49,13 +41,8 @@ function getLinks($page) {
   $jobPostPubDate = date("Y-m-d H:i:s");
   $jobPostAuthor = $siteToCrawl;
 
-  //echo "################################################\n";
-  echo $page;
 
   $html=getpagebycurl($page);
-  //echo "################################################\n";
-  //echo($html);
-  //echo "################################################\n\n";
   
 //  $html = file_get_contents("test.html");
   $html = str_ireplace('class="slJobTitle"'," ",$html);
@@ -80,31 +67,80 @@ function getLinks($page) {
     }
     $CNT++;
     
+
     $rssContentItem = "<item>\n";
     $jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
+    
+    //echo $jobPostTitle."\n";
     
     if (!$jobPostTitle){
       continue;
     }
+    
+    
 
-    $jobPostPubDate = date("Y-m-d 00:00:01");
+    $pubdate = preg_replace('!\s+!', ' ', replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext));
+    $pubdate = strtolower($pubdate);
+    
+    
+
+    //echo $pubdate,"\n";
+    
+    if (startsWith($pubdate,"ma")){
+      $pubdate = str_replace("ma", "today,", $pubdate);
+    } elseif(startsWith($pubdate,"meghirdetve: ma")){
+      $pubdate = str_replace("meghirdetve: ma", "today,", $pubdate);
+    } elseif(startsWith($pubdate,"tegnap")){
+      $pubdate = str_replace("tegnap", "yesterday,", $pubdate);
+    } elseif(startsWith($pubdate,"meghirdetve: 1 napja")){
+      $pubdate = str_replace("meghirdetve: 1 napja", "yesterday,", $pubdate);
+    } elseif(startsWith($pubdate,"1 napja")){
+      $pubdate = str_replace("1 napja", "yesterday,", $pubdate);
+    } elseif(startsWith($pubdate,"2 napja")){
+      $pubdate = str_replace("2 napja", "day before yesterday,", $pubdate);
+    } elseif(startsWith($pubdate,"meghirdetve: 2 napja")){
+      $pubdate = str_replace("meghirdetve: 2 napja", "day before yesterday,", $pubdate);
+    } elseif(startsWith($pubdate,"meghirdetve: 3 napja")){
+      $pubdate = str_replace("meghirdetve: 3 napja", "three days ago,", $pubdate);
+    }
+    $pubdate = strtotime($pubdate); 
+    
+    //echo $pubdate."\n";
+    
+    if ($pubdate){
+      if ($pubdate > (time()+(2 * 7 * 24 * 60 * 60))){
+        $pubdate = $pubdate - (52 * 7 * 24 * 60 * 60);
+      }
+      $jobPostPubDate = date("Y-m-d H:i:s",$pubdate);
+    }
+    //echo $jobPostPubDate,"\n";
+    
+    //check last date
+    $jobPostPubDate_i=strtotime($jobPostPubDate);
+    if ($jobPostPubDate_i < $LAD){
+      continue;
+    }
+    
+    //check future
+    if ($jobPostPubDate_i > time()){
+      $jobPostPubDate = date("Y-m-d 00:00:01");
+    }
     
     $desc='';
+    //$desc = $jobPostEntry->find($descfilter, 0)->plaintext;
+    //echo $desc."\n";
     
+    
+
     $rssContentItem .= "<title>" . strip_tags(replaceCharsForRSS($jobPostTitle)) . "</title>\n";
     
-    //echo($rssContentItem);
-    
     // get the URL of the entry
-    $jobPostLink = $jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->href;
+    $jobPostLink = $jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
     
     
     if (!$jobPostLink){
       continue;
     }
-    
-    //check redirect site
-    $jobPostLink = "https://" . $siteToCrawl . $jobPostLink;
     
     for ($x = 0; $x <= 10; $x++) {
       //echo "$x redirect...\n";
@@ -133,7 +169,7 @@ function getLinks($page) {
     //$headers = @get_headers($jobPostLink,1);
     //print_r($headers);
     
-    for ($y = 0; $y <= 5; $y++) {
+    for ($y = 0; $y <= 6; $y++) {
       $extracontent=getContent($jobPostLink);
       if ($extracontent){
         $desc.="\n".$extracontent;
@@ -143,8 +179,6 @@ function getLinks($page) {
         continue;
       }
     }
-    
-    $rssContentItem .= "<count>" . $counter . "</count>\n";
     
     $rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
     
@@ -158,32 +192,21 @@ function getLinks($page) {
     
     $rssContentItem .= "</item>\n";
     echo $rssContentItem;
-    
-    $counter++;
-    if ($counter > $MAX){
-      return false;
-    }
   }
   
-  for ($x = 0; $x <= $fetchPagesCount; $x++) {
-    $nextLink = "https://" . $siteToCrawl . $entryPoint."&start=".$z;
-    $headers = @get_headers($nextLink,1);
-    if(strpos($headers[0],'200')===false) { break; } else {
-      $extracontent=getContent($jobPostLink);
-      $desc.="\n".$extracontent;
-      $z++;
-      if(!empty($nextLink)) {
-        if ($pageContent){
-          @$pageContent->clear();
-          unset($pageContent);
-          $pageContent=NULL;
-        }
-        getLinks($nextLink);
-      }
+
+
+  // get next URL; can be very site specific
+  foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
+    $nextLink = "http://" . $siteToCrawl . $entryPoint."&pg=".$z;
+    $z++;
+    if(!empty($nextLink)) {
+      @$pageContent->clear();
+      unset($pageContent);
+      $pageContent=NULL;
+      getLinks($nextLink);
     }
-    if ($counter > $MAX){
-      return false;
-    }
+    
   }
 }
 
