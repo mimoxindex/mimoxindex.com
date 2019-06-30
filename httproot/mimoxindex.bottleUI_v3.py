@@ -254,7 +254,7 @@ def admin():
   page='<h1><a href="/">MimoxIndex</a> | <a href="/admin">MimoxIndex Admin Pages</a> | Logged in: '+s["user"]+'</h1><hr>'
   page+='<a href="./uploads">Upload MimoxIndex terms CSV into database</a><br>'+"\n"
   page+='<hr>'+"\n"
-  page+='<b>Site crawler statistics (90day)</b><br /><br />'+"\n"
+  page+='<b>Site crawler statistics (90days)</b><br />'+"\n"
   page+='<table class="level1" width="100%" border="0" cellpadding="2px" cellspacing="0"><br>'+"\n"
   page+='<tbody>'+"\n"
   page+='<tr class="head"><td class="head">Site Name</td><td class="head">Indexed Entry</td></tr>'+"\n"
