@@ -244,8 +244,26 @@ def admin():
       print s
       return "Too much auth request! Please try again later ..."
   HTML=get_template(tpl=ADMIN_TEMPLATE)
+  db,c=MySQLConn()
+  if not db or not c:
+    return HTML.decode("utf-8").replace("{{ data }}","MySQL Connection error.")
+  qry="select site,count(site) from rss group by site"
+  c.execute(qry)
+  irows = c.fetchall()
+  
   page='<h1><a href="/">MimoxIndex</a> | <a href="/admin">MimoxIndex Admin Pages</a> | Logged in: '+s["user"]+'</h1><hr>'
   page+='<a href="./uploads">Upload MimoxIndex terms CSV into database</a><br>'+"\n"
+  page+='<hr>'+"\n"
+  page+='<b>Site crawler statistics (90day)</b><br /><br />'+"\n"
+  page+='<table class="level1" width="100%" border="0" cellpadding="2px" cellspacing="0"><br>'+"\n"
+  page+='<tbody>'+"\n"
+  page+='<tr class="head"><td class="head">Site Name</td><td class="head">Indexed Entry</td></tr>'+"\n"
+  for t_row in irows:
+    site=str(t_row[0])
+    entry=str(t_row[1])
+    page+='<tr class="odd"><td class="left">'+site+'</td><td class="left">'+entry+'</td></tr>'+"\n"
+  page+='</tbody>'+"\n"
+  page+='</table>'+"\n"
   return HTML.decode("utf-8").replace("{{ data }}",page)
 
 @route('/uploads')
