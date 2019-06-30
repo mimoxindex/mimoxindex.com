@@ -258,12 +258,15 @@ def admin():
   page+='<table class="level1" width="100%" border="0" cellpadding="2px" cellspacing="0"><br>'+"\n"
   page+='<tbody>'+"\n"
   page+='<tr class="head"><td class="head">Site Name</td><td class="head">Indexed Entry</td></tr>'+"\n"
+  count=0
   for t_row in irows:
     site=str(t_row[0])
     entry=str(t_row[1])
+    count+=int(entry)
     page+='<tr class="odd"><td class="left">'+site+'</td><td class="left">'+entry+'</td></tr>'+"\n"
   page+='</tbody>'+"\n"
-  page+='</table>'+"\n"
+  page+='</table><br />'+"\n"
+  page+='Összesen: '+str(count)+"\n"
   return HTML.decode("utf-8").replace("{{ data }}",page)
 
 @route('/uploads')
