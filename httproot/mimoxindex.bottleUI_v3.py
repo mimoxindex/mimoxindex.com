@@ -884,7 +884,7 @@ def ajax_gethistory(searchterm="",searchmonths=""):
               return_dict[d][t]=pickle_date[t][1]
           """
   closeconn(db,c)
-  return json.dumps(return_dict)
+  return json.dumps(query_ar)
   
   
 @route('/submit_term/', method='POST')
