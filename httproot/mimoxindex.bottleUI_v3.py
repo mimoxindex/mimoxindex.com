@@ -845,7 +845,7 @@ def ajax_gethistory(searchdate=""):
 @route('/graph_gethistory/', method='GET')
 def ajax_gethistory(searchterm="",searchmonths=""):
   searchterm=""
-  searchmonth=""
+  searchmonth=24
   s = request.session
   pickle_date={}
   return_dict={}
@@ -854,7 +854,10 @@ def ajax_gethistory(searchterm="",searchmonths=""):
   if 'searchterm' in get_dict:
     searchterm = get_dict['searchterm']
   if 'searchmonth' in get_dict:
-    searchmonth = get_dict['searchmonth']
+    try:
+      searchmonth = int(get_dict['searchmonth'])
+    except:
+      pass
   db,c=MySQLConn()
   query_ar=searchterm.split(",")
   if len(query_ar) <= 1:
@@ -863,10 +866,13 @@ def ajax_gethistory(searchterm="",searchmonths=""):
         query_ar=["SQL","Java","Linux","JavaScript","C#","Python","C++","Docker","PHP",".NET"]
   query_ar=query_ar[:10]
   if not searchmonth:
-    searchmonth="24"
+    searchmonth=24
+  if searchmonth:
+    if searchmonth <=0:
+      searchmonth=24
   last_days=[]
-  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT %s"
-  c.execute(qry, (searchmonth))
+  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT %s, 1"
+  c.execute(qry, (searchmonth-1 if searchmonth > 0 else 0,))
   irows = c.fetchall()
   
   for row in irows:
