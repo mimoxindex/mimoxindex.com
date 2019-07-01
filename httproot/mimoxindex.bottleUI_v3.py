@@ -870,7 +870,7 @@ def ajax_gethistory(searchterm="",searchmonths=""):
   for row in irows:
     last_days.append(str(row[0]))
   for d in reversed(last_days):
-    qry="SELECT pickledump FROM trendhisory WHERE trenddate='"+d+"' LIMIT 1"
+    qry="SELECT pickledump FROM trendhisory WHERE trenddate like'"+d+"%' LIMIT 1"
     c.execute(qry)
     irows = c.fetchall()
     if irows:
