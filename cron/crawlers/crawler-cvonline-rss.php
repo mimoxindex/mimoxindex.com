@@ -153,7 +153,7 @@ function getLinks($page) {
     $rssContentItem .= "<count>" . $counter . "</count>\n";
     
     //die($jobdescr);
-    $rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
+    $rssContentItem .= "<link>" . strip_tags(str_ireplace('&',"%26",$jobPostLink)) . "</link>\n";
 
 
     $rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";

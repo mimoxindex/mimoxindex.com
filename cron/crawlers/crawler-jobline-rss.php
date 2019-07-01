@@ -4,8 +4,12 @@
 include('simple_html_dom.php');
 include('common.php');
 
+$MAX=250;
+$counter=1;
+
 $siteToCrawl = "jobline.hu";
 $entryPoint = "/allasok/it_telekommunikacio?s=50";
+
 
 function getContent($link) {
 //  echo "getcontent:",$link,"\n";
@@ -49,7 +53,7 @@ function getContent($link) {
 echo setXMLHeader($siteToCrawl);
 
 function getLinks($page) {
-  global $siteToCrawl, $LIMIT, $CNT;
+  global $siteToCrawl, $LIMIT, $CNT, $counter, $MAX;
 
   $mainPageJobPostIdentifier = "article[class=m-job_item]";
   //$mainPageJobPostIdentifier = "h2[class=job-title]";
@@ -147,8 +151,9 @@ function getLinks($page) {
       continue;
     }
     
-
-    $rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
+    $rssContentItem .= "<count>" . $counter . "</count>\n";
+    
+    $rssContentItem .= "<link>" . strip_tags(str_ireplace('&',"%26",$jobPostLink)) . "</link>\n";
 
     $rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";
     // get main content body of the entry
@@ -159,17 +164,24 @@ function getLinks($page) {
     //echo "jobPostTitle :",$trimmedTitle,", jobPostLink: ",$jobPostLink," pubdate: ",$pubdate,"\n";
     $rssContentItem .= "</item>\n";
     echo $rssContentItem;
-
+    $counter++;
+    if ($counter > $MAX){
+      return false;
+    }
   }
 
   // get next URL; can be very site specific
   foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
     $nextLink = "https://" . $siteToCrawl . $link->href;
     if(!empty($nextLink)) {
-      @$pageContent->clear();
-      unset($pageContent);
-      $pageContent=NULL;
-      getLinks($nextLink);
+      if ($pageContent){
+        @$pageContent->clear();
+        unset($pageContent);
+        $pageContent=NULL;
+      }
+    }
+    if ($counter > $MAX){
+      return false;
     }
   }
 }

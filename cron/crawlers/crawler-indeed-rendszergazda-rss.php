@@ -50,7 +50,7 @@ function getLinks($page) {
   $jobPostAuthor = $siteToCrawl;
 
   //echo "################################################\n";
-  echo $page;
+  //echo $page;
 
   $html=getpagebycurl($page);
   //echo "################################################\n";
@@ -146,7 +146,7 @@ function getLinks($page) {
     
     $rssContentItem .= "<count>" . $counter . "</count>\n";
     
-    $rssContentItem .= "<link>" . strip_tags($jobPostLink) . "</link>\n";
+    $rssContentItem .= "<link>" . strip_tags(str_ireplace('&',"%26",$jobPostLink)) . "</link>\n";
     
     // set pubDate
     $rssContentItem .= "<pubDate>" . strip_tags($jobPostPubDate) . "</pubDate>\n";
