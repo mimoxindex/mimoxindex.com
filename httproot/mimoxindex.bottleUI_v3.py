@@ -858,13 +858,15 @@ def ajax_gethistory(searchterm="",searchmonths=""):
   db,c=MySQLConn()
   query_ar=searchterm.split(",")
   if len(query_ar) <= 1:
-    query_ar=["SQL","Java","Linux","JavaScript","C#","Python","C++","Docker","PHP",".NET"]
+    if len(query_ar):
+      if not query_ar[0]:
+        query_ar=["SQL","Java","Linux","JavaScript","C#","Python","C++","Docker","PHP",".NET"]
   query_ar=query_ar[:10]
   if not searchmonth:
     searchmonth="24"
   last_days=[]
-  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT "+searchmonth
-  c.execute(qry)
+  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT %s"
+  c.execute(qry, (searchmonth))
   irows = c.fetchall()
   
   for row in irows:
@@ -879,8 +881,9 @@ def ajax_gethistory(searchterm="",searchmonths=""):
           pickle_date=pickle.loads(str(irows[0][0]))
           return_dict[d]={}
           for t in query_ar:
-            if t in pickle_date:
-              return_dict[d][t]=pickle_date[t][1]
+            if t:
+              if t in pickle_date:
+                return_dict[d][t]=pickle_date[t][1]
   closeconn(db,c)
   return json.dumps(return_dict)
   
