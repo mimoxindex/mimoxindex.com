@@ -270,7 +270,7 @@ def admin():
   page+='<hr>'+"\n"
   page+='''
   <script src="/static/Chart.min.js"></script>
-  <div style="width:50%;">
+  <div style="width:95%;">
     <canvas id="canvas"></canvas>
   </div>
   <br>
