@@ -857,7 +857,7 @@ def ajax_gethistory(searchterm="",searchmonths=""):
     searchmonth = get_dict['searchmonth']
   db,c=MySQLConn()
   query_ar=searchterm.split(",")
-  if not len(query_ar):
+  if len(query_ar) <= 1:
     query_ar=["SQL","Java","Linux","JavaScript","C#","Python","C++","Docker","PHP",".NET"]
   query_ar=query_ar[:10]
   if not searchmonth:
