@@ -267,6 +267,99 @@ def admin():
   page+='</tbody>'+"\n"
   page+='</table><br />'+"\n"
   page+='Összesen: '+str(count)+"\n"
+  page+='<hr>'+"\n"
+  page+='''
+  <script src="/static/Chart.min.js"></script>
+  <div style="width:50%;">
+    <canvas id="canvas"></canvas>
+  </div>
+  <br>
+  <script>
+    window.chartColors = {
+      red: 'rgb(255, 99, 132)',
+      orange: 'rgb(255, 159, 64)',
+      yellow: 'rgb(255, 205, 86)',
+      green: 'rgb(75, 192, 192)',
+      blue: 'rgb(54, 162, 235)',
+      purple: 'rgb(153, 102, 255)',
+      grey: 'rgb(201, 203, 207)',
+      black: 'rgb(50, 50, 50)',
+      olive: 'rgb(130, 10, 120)',
+      lime: 'rgb(50, 200, 20)',
+    };
+    var config = {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: window.chartColors.lime,
+          borderColor: window.chartColors.lime,
+          data: [
+            1,
+            2,
+            10,
+            5,
+            4,
+            6,
+            12
+          ],
+          fill: false,
+        }, {
+          label: 'My Second dataset',
+          fill: false,
+          backgroundColor: window.chartColors.green,
+          borderColor: window.chartColors.green,
+          data: [
+            -1,
+            22,
+            1,
+            14,
+            1,
+            8,
+            2
+          ],
+        }]
+      },
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Chart.js Line Chart'
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Month'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Value'
+            }
+          }]
+        }
+      }
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+      window.myLine = new Chart(ctx, config);
+    };
+  </script>
+  '''
   return HTML.decode("utf-8").replace("{{ data }}",page)
 
 @route('/uploads')
