@@ -842,6 +842,48 @@ def ajax_gethistory(searchdate=""):
   closeconn(db,c)
   return json.dumps(return_dict)
   
+@route('/graph_gethistory/', method='GET')
+def ajax_gethistory(searchterm="",searchmonths=""):
+  searchterm=""
+  searchmonth=""
+  s = request.session
+  pickle_date={}
+  return_dict={}
+  trenddate=""
+  get_dict = request.query.decode()
+  if 'searchterm' in get_dict:
+    searchterm = get_dict['searchterm']
+  if 'searchmonth' in get_dict:
+    searchmonth = get_dict['searchmonth']
+  db,c=MySQLConn()
+  query_ar=searchterm.split(",")
+  if not query_ar:
+    query_ar=["SQL","Java","Linux","JavaScript","C#","Python","C++","Docker","PHP",".NET"]
+  query_ar=query_ar[:10]
+  if not searchmonth:
+    searchmonth="24"
+  last_days=[]
+  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT "+searchmonth
+  c.execute(qry)
+  irows = c.fetchall()
+  
+  for row in irows:
+    last_days.append(str(row[0]))
+  for d in reversed(last_days):
+    qry="SELECT pickledump FROM trendhisory WHERE trenddate='"+d+"' LIMIT 1"
+    c.execute(qry)
+    irows = c.fetchall()
+    if irows:
+      if len(irows):
+        if len(irows[0]):
+          pickle_date=pickle.loads(str(irows[0][1]))
+          return_dict[d]={}
+          for t in query_ar:
+            if t in pickle_date:
+              return_dict[d][t]=pickle_date[t][1]
+  closeconn(db,c)
+  return json.dumps(return_dict)
+  
   
 @route('/submit_term/', method='POST')
 def submit_term():
