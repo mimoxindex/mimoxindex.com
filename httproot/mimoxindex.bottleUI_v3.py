@@ -871,8 +871,8 @@ def ajax_gethistory(searchterm="",searchmonths=""):
     if searchmonth <=0:
       searchmonth=24
   last_days=[]
-  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT %s, 1"
-  c.execute(qry, (searchmonth-1 if searchmonth > 0 else 0,))
+  qry="SELECT Last_Day(trenddate) as td FROM trendhisory group by td ORDER BY trenddate DESC LIMIT %i" % searchmonth
+  c.execute(qry)
   irows = c.fetchall()
   
   for row in irows:
