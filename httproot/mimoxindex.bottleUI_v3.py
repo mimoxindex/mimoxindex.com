@@ -878,13 +878,11 @@ def ajax_gethistory(searchterm="",searchmonths=""):
         if len(irows[0]):
           pickle_date=pickle.loads(str(irows[0][0]))
           return_dict[d]=pickle_date
-          """
           for t in query_ar:
             if t in pickle_date:
               return_dict[d][t]=pickle_date[t][1]
-          """
   closeconn(db,c)
-  return json.dumps(query_ar)
+  return json.dumps(return_dict)
   
   
 @route('/submit_term/', method='POST')
