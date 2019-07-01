@@ -882,7 +882,7 @@ def ajax_gethistory(searchterm="",searchmonths=""):
             if t in pickle_date:
               return_dict[d][t]=pickle_date[t][1]
   closeconn(db,c)
-  return json.dumps(return_dict)
+  return json.dumps(last_days)
   
   
 @route('/submit_term/', method='POST')
