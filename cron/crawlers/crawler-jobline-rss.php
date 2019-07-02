@@ -1,5 +1,5 @@
 <?php
-//error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(0);
 
 include('simple_html_dom.php');
 include('common.php');
@@ -81,8 +81,8 @@ function getLinks($page) {
     }
     $CNT++;
 
-    echo($jobPostEntry."\n");
-    continue;
+    //echo($jobPostEntry."\n");
+    //continue;
 
     $rssContentItem = "<item>\n";
     $jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
