@@ -3,17 +3,18 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 include('simple_html_dom.php');
 include('common.php');
+
 $MAX=250;
 $counter=1;
 
-$siteToCrawl = "www.profession.hu";
-$entryPoint = "/allasok/it-programozas-fejlesztes/1,10";
+$siteToCrawl = "mimox.com";
+$entryPoint = "/hu/allasajanlatok/";
 
 function getContent($link) {
   $html=getpagebycurl($link);
   $pageContent = new simple_html_dom();
   $pageContent->load($html);
-  $mainPageJobPostIdentifier = "div[id=adv]";
+  $mainPageJobPostIdentifier = "div[class=job-description]";
   $out="";
   foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
     $out .= sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->plaintext))));
@@ -29,23 +30,30 @@ echo setXMLHeader($siteToCrawl);
 function getLinks($page) {
   global $siteToCrawl, $LIMIT, $CNT, $counter, $MAX;
 
-  $mainPageJobPostIdentifier = "div[class=position_and_company]";
-  $mainPageJobPostTitleIdentifier = "h2[class=job-card__title]";
-  $mainPageJobPostLinkIdentifier = "h2[class=job-card__title]/a";
+  $mainPageJobPostIdentifier = "li[class=job-offer]";
+  $mainPageJobPostTitleIdentifier = "a";
+  $mainPageJobPostLinkIdentifier = "a";
   $pubdatefilter = "div[class=bottom row]/div[class=date]";
   $descfilter = "div[class=row]/div[class=list_tasks]";
   $mainPageNextLinkIdentifier = "a[class=next]";
 
   $jobPostPubDate = date("Y-m-d H:i:s");
   $jobPostAuthor = $siteToCrawl;
-  
+
+
   $html=getpagebycurl($page);
   $pageContent = new simple_html_dom();
   $pageContent->load($html);
-  $LAD=lastAcceptDate();
 
+  if (!$pageContent){
+    return;
+  }
+
+  $LAD=lastAcceptDate();
+  
   // loop through item entries on main page
   foreach($pageContent->find($mainPageJobPostIdentifier) as $jobPostEntry) {
+    
     if ($CNT >= $LIMIT){
       echo "<!-- CNT LIMIT -->";
       echo "</channel>\n";
@@ -54,12 +62,9 @@ function getLinks($page) {
     }
     $CNT++;
 
-    
     $rssContentItem = "<item>\n";
     $jobPostTitle = replaceCharsForRSS(sanitize_for_xml(trim(stripInvalidXml(html_entity_decode($jobPostEntry->find($mainPageJobPostTitleIdentifier, 0)->plaintext)))));
-
-    //echo $jobPostTitle."\n";
-
+    
     if (!$jobPostTitle){
       continue;
     }
@@ -71,45 +76,15 @@ function getLinks($page) {
 
     //var_dump($jobPostLinkpieces);
     $jobPostLink = $jobPostLinkpieces["scheme"]."://".$jobPostLinkpieces["host"].$jobPostLinkpieces["path"];
+    
+    
     if (!$jobPostLink){
       continue;
     }
     
-    $pubdate = preg_replace('!\s+!', ' ', replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext));
-    
-    $curryear=date("Y");
-    if (startsWith($pubdate,"ma")){
-      $pubdate = str_replace("ma", "today,", $pubdate);
-    } elseif(startsWith($pubdate,"tegnap")){
-      $pubdate = str_replace("tegnap", "yesterday,", $pubdate);
-    }
-    
-    $pubdate = strtotime($pubdate);
-    if ($pubdate){
-      if ($pubdate > (time()+(2 * 7 * 24 * 60 * 60))){
-        $pubdate = $pubdate - (52 * 7 * 24 * 60 * 60);
-      }
-      $jobPostPubDate = date("Y-m-d H:i:s",$pubdate);
-    }
-    
-    //check last date
-    $jobPostPubDate_i=strtotime($jobPostPubDate);
-    if ($jobPostPubDate_i < $LAD){
-      continue;
-    }
-    
-    //check future
-    if ($jobPostPubDate_i > time()){
-      $jobPostPubDate = date("Y-m-d 00:00:01");
-    }
-    
-    //echo $jobPostPubDate,"\n";
-    
-    $desc = $jobPostEntry->find($descfilter, 0)->plaintext;
-    
     $rssContentItem .= "<title>" . strip_tags(replaceCharsForRSS($jobPostTitle)) . "</title>\n";
     
-
+    
     $headers = @get_headers($jobPostLink);
     if(strpos($headers[0],'200')===false) {} else {
       $extracontent=getContent($jobPostLink);
@@ -136,13 +111,9 @@ function getLinks($page) {
     }
   }
 
-  //die($pageContent);
-
   // get next URL; can be very site specific
   foreach($pageContent->find($mainPageNextLinkIdentifier) as $link){
     //$nextLink = "https://" . $siteToCrawl . $link->href;
-    //echo "\n\n","NEXTLINK:",$nextLink,"\n\n";
-    // if there's another "next" URL then crawl
     $nextLink = $link->href;
     if(!empty($nextLink)) {
       if ($pageContent){
@@ -158,7 +129,6 @@ function getLinks($page) {
   }
 }
 
-//main starting point
 getLinks("https://" . $siteToCrawl . $entryPoint);
 echo "</channel>\n";
 echo "</rss>\n";

@@ -13,7 +13,7 @@ kill -9 $PIDS > /dev/null 2>&1 &
 sleep 1
 
 # looping through the sites to crawl
-for SITE in profession-1 cvonline jobline schonherzbazis profession-2 indeed-developer indeed-devops indeed-cloud indeed-rendszergazda workania-developer workania-devops
+for SITE in profession-1 cvonline jobline schonherzbazis profession-2 indeed-developer indeed-devops indeed-cloud indeed-rendszergazda workania-developer workania-devops mimox
 do
   RSS_OUT=${CACHE}/${SITE}-rss.xml
   if [ -f ${RSS_OUT} ]; then

@@ -30,10 +30,9 @@ echo setXMLHeader($siteToCrawl);
 function getLinks($page) {
   global $siteToCrawl, $LIMIT, $CNT, $counter, $MAX;
 
-  // site specific DOM identifiers; 2. change this part
-  $mainPageJobPostIdentifier = "div[class=data]";
-  $mainPageJobPostTitleIdentifier = "div[class=row]/div[class=position_and_company]/h2/a/strong";
-  $mainPageJobPostLinkIdentifier = "div[class=row]/div[class=position_and_company]/h2/a";
+  $mainPageJobPostIdentifier = "div[class=position_and_company]";
+  $mainPageJobPostTitleIdentifier = "h2[class=job-card__title]";
+  $mainPageJobPostLinkIdentifier = "h2[class=job-card__title]/a";
   $pubdatefilter = "div[class=bottom row]/div[class=date]";
   $descfilter = "div[class=row]/div[class=list_tasks]";
   $mainPageNextLinkIdentifier = "a[class=next]";
@@ -70,6 +69,17 @@ function getLinks($page) {
       continue;
     }
     
+    // get the URL of the entry
+    $jobPostLink = $jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
+    
+    $jobPostLinkpieces = parse_url($jobPostLink);
+
+    //var_dump($jobPostLinkpieces);
+    $jobPostLink = $jobPostLinkpieces["scheme"]."://".$jobPostLinkpieces["host"].$jobPostLinkpieces["path"];
+    if (!$jobPostLink){
+      continue;
+    }
+    
     $pubdate = preg_replace('!\s+!', ' ', replaceCharsForRSS($jobPostEntry->find($pubdatefilter, 0)->plaintext));
     
     if (startsWith($pubdate,"ma")){
@@ -102,12 +112,6 @@ function getLinks($page) {
     
     $rssContentItem .= "<title>" . strip_tags(replaceCharsForRSS($jobPostTitle)) . "</title>\n";
     
-    // get the URL of the entry
-    $jobPostLink = $jobPostEntry->find($mainPageJobPostLinkIdentifier, 0)->href;
-
-    if (!$jobPostLink){
-      continue;
-    }
     
     $headers = @get_headers($jobPostLink);
     if(strpos($headers[0],'200')===false) {} else {
